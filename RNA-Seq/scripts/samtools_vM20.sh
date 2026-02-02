@@ -1,9 +1,4 @@
 #!/bin/bash
-#SBATCH --array=1-96
-#SBATCH -D /home/jaxa/akihito.otsuki.bz/workdir/240215_mhu8/02_star_rsem
-#SBATCH --cpus-per-task=4
-#SBATCH --mem-per-cpu=12G
-
 set -eux
 
 bams=(*_vM20.STAR.genome.bam)
