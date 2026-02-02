@@ -1,9 +1,5 @@
 #!/bin/bash
-#SBATCH --array=1-57
-#SBATCH -D  /home/jaxa/akihito.otsuki.bz/workdir/241219_mhu45_Soles/02_star_rsem
-#SBATCH --cpus-per-task=2
-#SBATCH --mem-per-cpu=35G
-#SBATCH --partition tmem
+
 set -eux
 
 fqs=(*_1.fastq.gz)
