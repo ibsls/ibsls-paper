@@ -1,10 +1,9 @@
 #!/usr/bin/env Rscript
 
-suppressPackageStartupMessages({
-  library(dplyr)
-  library(ggplot2)
-  library(grid)
-})
+library(dplyr)
+library(ggplot2)
+
+
 
 # Generate binned source data and a plot for Supplementary Figure S1a (MHU-1).
 #
