@@ -19,9 +19,9 @@ The following scripts generate the binned data and figure panels from the raw RP
 The following script was used to generate the all-sample PCA shown in Supplementary Fig. S2.  
 `scripts/SuppFigS2_pca_plot.R`  
 
-## Web-rendered bar-graph panels
+## Web-rendered panels
 
-Some graph panels in the manuscript are screenshots from the ibSLS web interface, including gene-expression panels (Figs. 4c, 5d, and 7c; Supplementary Fig. S3b) and metabolite-abundance panels (Figs. 4f and 6d; Supplementary Fig. S4a-e).  
+Some graph panels in the manuscript are screenshots from the ibSLS web interface, including gene-expression bar graphs (Figs. 4c, 5d, and 7c; Supplementary Fig. S3b) and metabolite-abundance bar graphs (Figs. 4f and 6d; Supplementary Fig. S4a-e), and gene-expression heatmap (Fig. 5c).  
 The underlying numerical values are provided as Source Data, whereas standalone plotting scripts are not provided for these web-rendered panels.
 
 ## Core software
