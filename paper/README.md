@@ -1,10 +1,10 @@
 
 
-# Software versions
+# Scripts for paper
 
 This file summarizes the main software tools used for RNA-seq data processing in the ibSLS paper.
 
-
+## xxx
 Raw RPM records underlying Supplementary Fig. S1 are provided as Supplementary Data associated with the paper.
 The manuscript Source Data includes the binned values used for plotting.
 The scripts in this directory generate the binned data and figure panels from the raw RPM records.
