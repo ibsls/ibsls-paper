@@ -48,7 +48,7 @@ BAM processing was performed using:
 
 - `scripts/02_samtools_sort.sh`
 
-This step sorts and indexes BAM files generated during the RNA-seq workflow for downstream analysis.
+This step sorts and indexes BAM files for downstream analysis.
 
 ## Merging expression results
 
