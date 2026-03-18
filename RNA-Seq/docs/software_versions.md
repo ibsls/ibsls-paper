@@ -5,7 +5,7 @@ This file summarizes the main software tools used in the ibSLS paper and their c
 ## Core software
 
 | Software | Version | Purpose | Citation | Note |
-|---|---|---|---|---|
+|------|---|---|---|---|
 | STAR | 2.6.1d* | RNA-seq read mapping during RSEM-based quantification; genome index generation | Dobin A, Davis CA, Schlesinger F, Drenkow J, Zaleski C, Jha S, Batut P, Chaisson M, Gingeras TR. *STAR: ultrafast universal RNA-seq aligner*. Bioinformatics. 2013;29(1):15-21. doi:10.1093/bioinformatics/bts635 | STAR version was confirmed from `RNA-Seq/references/logs/mm10_vM20Log.out`. The Methods section reports STAR version 2.6.1. |
 | RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification | Li B, Dewey CN. *RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome*. BMC Bioinformatics. 2011;12:323. doi:10.1186/1471-2105-12-323 | Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. |
 | samtools | [xxx] | BAM sorting and indexing | Danecek P, Bonfield JK, Liddle J, Marshall J, Ohan V, Pollard MO, Whitwham A, Keane T, McCarthy SA, Davies RM, Li H. *Twelve years of SAMtools and BCFtools*. GigaScience. 2021;10(2):giab008. doi:10.1093/gigascience/giab008 | Please fill in the exact version used in the original analysis environment. |
