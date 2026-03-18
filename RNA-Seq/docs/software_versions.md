@@ -1,6 +1,6 @@
 # Software versions
 
-This file summarizes the main software tools used in the ibSLS paper.
+This file summarizes the main software tools used for RNA-seq data processing in the ibSLS database.
 
 ## Core software
 
