@@ -8,7 +8,7 @@ This file summarizes the main software tools used in the ibSLS paper.
 |---|---|---|---|---|
 | STAR | 2.6.1d | RNA-seq read mapping during RSEM-based quantification; genome index generation | [1] | Version confirmed from `RNA-Seq/references/logs/mm10_vM20Log.out`. The Methods section reports STAR version 2.6.1. |
 | RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification | [2] | Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. |
-| samtools | [xxx] | BAM sorting and indexing | [3] | Please fill in the exact version used in the original analysis environment. |
+| samtools | [xxx] | BAM sorting and indexing | [3] |  Used in sorting and indexing BAM files  |
 | R | [xxx] | Statistical analysis and data processing | [4] | Please fill in the exact version used in the original analysis environment. |
 | DESeq2 | [xxx] | Differential expression analysis | [5] | Used for Wald-test-based differential expression analysis. |
 | ggplot2 | [xxx] | Data visualization | [6] | Used for PCA and other data visualization steps. |
