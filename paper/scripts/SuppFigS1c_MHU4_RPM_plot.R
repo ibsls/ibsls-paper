@@ -2,6 +2,7 @@
 
 library(dplyr)
 library(ggplot2)
+library(lubridate)
 
 # Generate binned source data and a plot for Supplementary Figure S1c (MHU-4).
 #
