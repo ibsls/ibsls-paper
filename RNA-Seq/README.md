@@ -58,13 +58,7 @@ Per-sample expression outputs were merged using:
 
 This step generates a merged expression matrix for downstream analyses.
 
-## Metadata
 
-Sample identifiers used in the workflow are summarized in:
-
-- `metadata/sample_id_list.tsv`
-
-An example sample metadata table may also be provided for documentation purposes.
 
 ## Notes
 
