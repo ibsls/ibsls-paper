@@ -26,7 +26,6 @@ library(ggsci)
 # Notes:
 #   - PCA is performed on log2(TPM + 1).
 #   - Genes were retained if TPM > 1 in more than 30% of samples.
-#   - This script was used for the manuscript-level all-sample PCA.
 
 samples <- read.table("sample_metadata.tsv", sep = "\t", header = TRUE, check.names = FALSE) %>%
   select(
