@@ -12,7 +12,7 @@ The workflow includes:
 
 ## Directory structure
 
-- `database/`: scripts used for metabolome data processing and comparison
+- `scripts/`: scripts used for metabolome data processing and comparison
 - `docs/`: metabolome-specific documentation
 
 ## Differential abundance analysis
