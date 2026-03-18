@@ -1,5 +1,5 @@
-| Label | File_name | Type | Source | Note |
-|---|---|---|---|---|
-| genome_fasta	| mm10_no_alt_analysis_set_ENCODE.fasta	| FASTA	| ENCODE	reference genome	| mouse genome FASTA |
-| gene_annotation	| gencode.vM20.basic.annotation.gtf	| GTF	| GENCODE vM20 basic	gene annotation	| mouse gene annotation |
-| star_build_log	| mm10_vM20Log.out | LOG	original analysis environment	build record	| STAR genomeGenerate | log retained as supplementary provenance |
+| Label | File_name | Type | Source | Note | URL |
+|---|---|---|---|---|---|
+| genome_fasta	| mm10_no_alt_analysis_set_ENCODE.fasta	| FASTA	| ENCODE	reference genome	| mouse genome FASTA | https://www.encodeproject.org/files/mm10_no_alt_analysis_set_ENCODE/@@download/mm10_no_alt_analysis_set_ENCODE.fasta.gz |
+| gene_annotation	| gencode.vM20.basic.annotation.gtf	| GTF	| GENCODE vM20 basic	gene annotation	| mouse gene annotation | https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M20/gencode.vM20.basic.annotation.gtf.gz | 
+| star_build_log	| mm10_vM20Log.out | LOG	original analysis environment	build record	| STAR genomeGenerate | log retained as supplementary provenance | |
