@@ -6,7 +6,7 @@ library(ggplot2)
 # Generate binned source data and a plot for Supplementary Figure S1c (MHU-4).
 #
 # Input:
-#   - MHU-4_rpm.txt
+#   - SupplementaryDataS3.txt
 #
 # Output:
 #   - SourceData_SuppFigS1c.csv
