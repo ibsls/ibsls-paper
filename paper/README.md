@@ -14,7 +14,7 @@ The following scripts generate the binned data and figure panels from the raw RP
 `scripts/SuppFigS1d_MHU4_RPM_plot.R`   
 `scripts/SuppFigS1e_MHU5_RPM_plot.R`
 
-## PCA of transcriptome profiles across missions and tissues (Supplementary Figure S2)
+## PCA of transcriptome profiles across missions and tissues
 
 The following script was used to generate the all-sample PCA shown in Supplementary Fig. S2.  
 `scripts/SuppFigS2_pca_plot.R`  
