@@ -6,16 +6,16 @@ This file summarizes the main software tools used for RNA-seq data processing in
 
 | Software | Version | Purpose | Ref. | Note |
 |---|---|---|---|---|
-| STAR | 2.6.1d | RNA-seq read mapping during RSEM-based quantification; genome index generation | [1] | Version confirmed from `RNA-Seq/references/logs/mm10_vM20Log.out`. The Methods section reports STAR version 2.6.1. |
-| RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification | [2] | Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. |
-| samtools | [xxx] | BAM sorting and indexing | [3] |  Used in sorting and indexing BAM files  |
-| R | [xxx] | Statistical analysis and data processing | [4] | Please fill in the exact version used in the original analysis environment. |
-| DESeq2 | [xxx] | Differential expression analysis | [5] | Used for Wald-test-based differential expression analysis. |
-| ggplot2 | [xxx] | Data visualization | [6] | Used for PCA and other data visualization steps. |
-| tidyverse | [xxx] | Data manipulation in `03_merge_expression.R` | [7] | Used in the merge script. |
-| dplyr | [xxx] | Data manipulation in `03_merge_expression.R` | [8] | Used in the merge script. |
-| stringr | [xxx] | String handling in `03_merge_expression.R` | [9] | Used in the merge script. |
-| gtools | [xxx] | Mixed sorting of file names in `03_merge_expression.R` | [10] | Used in the merge script. |
+| STAR | 2.6.1d | RNA-seq reference preparation and read mapping. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [1] | 
+| RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`.  | [2] | 
+| samtools | [xxx] | BAM sorting and indexing | [3] | 
+| R | [xxx] | Data processing  and statistical analysis | [4] | 
+| tidyverse | [xxx] | Data manipulation in `03_merge_expression.R` | [5] | 
+| dplyr | [xxx] | Data manipulation in `03_merge_expression.R` | [6] | 
+| stringr | [xxx] | String handling in `03_merge_expression.R` | [7] | 
+| gtools | [xxx] | Mixed sorting of file names in `03_merge_expression.R` | [8] | 
+| DESeq2 | [xxx] | Differential expression analysis | [9] | 
+| ggplot2 | [xxx] | Data visualization | [10] | 
 
 ## References
 
@@ -27,15 +27,15 @@ This file summarizes the main software tools used for RNA-seq data processing in
 
 [4] R Core Team. *R: A language and environment for statistical computing*. R Foundation for Statistical Computing, Vienna, Austria.
 
-[5] Love MI, Huber W, Anders S. *Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2*. Genome Biology. 2014;15(12):550. doi:10.1186/s13059-014-0550-8
-
-[6] Wickham H. *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York; 2016.
-
-[7] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H. *Welcome to the 
+[5] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H. *Welcome to the 
 tidyverse*. Journal of Open Source Software. 2019;4(43):1686. doi:10.21105/joss.01686
 
-[8] Wickham H, François R, Henry L, Müller K, Vaughan D. *dplyr: A Grammar of Data Manipulation*. R package.
+[6] Wickham H, François R, Henry L, Müller K, Vaughan D. *dplyr: A Grammar of Data Manipulation*. R package.
 
-[9] Wickham H. *stringr: Simple, Consistent Wrappers for Common String Operations*. R package.
+[7] Wickham H. *stringr: Simple, Consistent Wrappers for Common String Operations*. R package.
 
-[10] Warnes GR, Bolker B, Lumley T. *gtools: Various R Programming Tools*. R package.
+[8] Warnes GR, Bolker B, Lumley T. *gtools: Various R Programming Tools*. R package.
+
+[9] Love MI, Huber W, Anders S. *Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2*. Genome Biology. 2014;15(12):550. doi:10.1186/s13059-014-0550-8
+
+[10] Wickham H. *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York; 2016.
