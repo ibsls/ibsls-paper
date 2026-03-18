@@ -28,11 +28,12 @@ The underlying numerical values are provided as Source Data, whereas standalone 
 
 | Software | Version | Purpose | Ref. | 
 |---|---|---|---|
-| R | [xxx] | Data processing  and statistical analysis | [1] | 
-| tidyverse | [xxx] | Data manipulation | [2] | 
-| dplyr | [xxx] | Data manipulation | [3] | 
-| lubridate | [xxx] | Date handling | [4] | 
-| ggplot2 | [xxx] | Data visualization | [6] | 
+| R | 4.1.2 | Data processing  and statistical analysis | [1] | 
+| tidyverse | 1.3.1 | Data manipulation | [2] | 
+| dplyr | 1.0.8 | Data manipulation | [3] | 
+| lubridate | 1.8.0 | Date handling | [4] | 
+| ggplot2 | 3.3.5 | Data visualization | [6] | 
+| ggsci | 4.2.0 | Data visualization | [xxx] |
 
 ## References
 
