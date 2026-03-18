@@ -11,8 +11,8 @@ The following scripts generate the binned data and figure panels from the raw RP
 
 - `scripts/SuppFigS1a_MHU1_RPM_plot.R`
 - `scripts/SuppFigS1b_MHU2_RPM_plot.R`
-- `scripts/SuppFigS1d_MHU4_RPM_plot.R`
-- `scripts/SuppFigS1e_MHU5_RPM_plot.R`
+- `scripts/SuppFigS1c_MHU4_RPM_plot.R`
+- `scripts/SuppFigS1d_MHU5_RPM_plot.R`
 
 ## PCA of transcriptome profiles across missions and tissues
 
