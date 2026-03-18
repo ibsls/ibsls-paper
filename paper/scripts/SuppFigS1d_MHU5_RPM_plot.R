@@ -74,7 +74,7 @@ g <- ggplot(binned, aes(x = ElapsedDays, y = RPM)) +
   ) +
   ylim(0, 80) +
   ggtitle("MHU-5, bin = 10 sec") +
-  xlab("Days since the start of MARS") +
+  xlab("Days since the start of CBEF") +
   ylab("Measured rotation speed [RPM]")
 print(g)
 dev.off()
