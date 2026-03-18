@@ -39,5 +39,5 @@ This log is included as supplementary provenance information.
 
 ## Note
 
-Prebuilt reference index files are not distributed in this repository.
-Users should rebuild the reference locally using the source FASTA/GTF files and the script provided here.
+Reference index files are not included in this repository.
+Please rebuild them locally using the source FASTA/GTF files and `build_index.sh`.
