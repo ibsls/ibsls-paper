@@ -10,10 +10,9 @@ The reference was prepared using `rsem-prepare-reference --star`, which generate
 
 The following source files were used:
 
-- genome FASTA: `mm10_no_alt_analysis_set_ENCODE.fasta`
-- gene annotation GTF: `gencode.vM20.basic.annotation.gtf`
-
-These source files are not redistributed in this repository.
+label	file_name	type	source	role	note	url
+genome_fasta	mm10_no_alt_analysis_set_ENCODE.fasta	FASTA	ENCODE	reference genome	mouse genome FASTA	https://www.encodeproject.org/files/mm10_no_alt_analysis_set_ENCODE/@@download/mm10_no_alt_analysis_set_ENCODE.fasta.gz
+gene_annotation	gencode.vM20.basic.annotation.gtf	GTF	GENCODE vM20 basic	gene annotation	mouse gene annotation	https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M20/gencode.vM20.basic.annotation.gtf.gz
 
 ## Build script
 
