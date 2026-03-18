@@ -16,7 +16,8 @@ The following scripts generate the binned data and figure panels from the raw RP
 
 ## PCA of transcriptome profiles across missions and tissues (Supplementary Figure S2)
 
-This directory includes the script used to generate the all-sample PCA shown in Supplementary Fig. S2.
+The following script was used to generate the all-sample PCA shown in Supplementary Fig. S2.  
+`scripts/SuppFigS2_pca_plot.R`  
 
 ## Web-rendered bar-graph panels
 
