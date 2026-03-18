@@ -1,7 +1,6 @@
-
 # RNA-Seq workflow
 
-This directory contains scripts and documentation for RNA-seq processing used in the ibSLS paper.
+This directory contains scripts and documentation for RNA-seq data processing used in the ibSLS project and associated manuscript analyses.
 
 ## Overview
 
@@ -11,14 +10,15 @@ The workflow includes:
 2. expression quantification with RSEM
 3. read mapping performed internally with STAR during RSEM quantification
 4. BAM processing using samtools
-5. merging per-sample expression outputs for downstream analysis
-6. differential expression analysis using DESeq2
+5. merging per-sample expression outputs
+6. generation of compact count tables for group-wise comparison
+7. differential expression analysis using DESeq2
 
 ## Directory structure
 
 - `metadata/`: sample lists and example metadata tables
-- `references/`: reference preparation script and documentation
-- `scripts/`: RNA-seq processing and aggregation scripts
+- `references/`: reference preparation scripts and related documentation
+- `scripts/`: RNA-seq processing, aggregation, and differential expression analysis scripts
 
 ## Reference preparation
 
@@ -57,29 +57,41 @@ Per-sample expression outputs were merged using:
 
 - `scripts/03_merge_expression.R`
 
-This step generates a merged expression matrix for downstream analyses.
+This step generates a merged gene-level expression matrix for downstream analyses.
+
+## Generation of compact count tables
+
+Compact count tables for group-wise comparisons were generated using:
+
+- `scripts/04_make_count_table.py`
+
+This step converts merged gene-level expression results into compact count tables in which replicate counts for each comparison group are stored as comma-separated values.
 
 ## Differential expression analysis
 
-Differential expression analysis was performed using DESeq2 from compact count tables in which replicate counts for each comparison group were stored as comma-separated values.
+Differential expression analysis was performed using DESeq2 from the compact count tables generated in the previous step.
+
 The analysis script is provided in:
 
-- `scripts/04_deseq2_analysis.R`
+- `scripts/05_deseq2_two_group.R`
+
+This script expands replicate counts from each comparison group, reconstructs the count matrix, and performs two-group differential expression analysis using DESeq2.
 
 ## Core software
 
-| Software | Version | Purpose | Ref. | 
+| Software | Version | Purpose | Ref. |
 |---|---|---|---|
-| STAR | 2.6.1d | RNA-seq reference preparation and read mapping. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [1] | 
-| RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`.  | [2] | 
-| samtools | [xxx] | BAM sorting and indexing | [3] | 
-| R | [xxx] | Data processing  and statistical analysis | [4] | 
-| tidyverse | [xxx] | Data manipulation in `03_merge_expression.R` | [5] | 
-| dplyr | [xxx] | Data manipulation in `03_merge_expression.R` | [6] | 
-| stringr | [xxx] | String handling in `03_merge_expression.R` | [7] | 
-| gtools | [xxx] | Mixed sorting of file names in `03_merge_expression.R` | [8] | 
-| DESeq2 | [xxx] | Differential expression analysis | [9] | 
-| ggplot2 | [xxx] | Data visualization | [10] | 
+| STAR | 2.6.1d | RNA-seq reference preparation and read mapping. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [1] |
+| RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [2] |
+| samtools | [xxx] | BAM sorting and indexing | [3] |
+| R | [xxx] | Data processing and statistical analysis | [4] |
+| tidyverse | [xxx] | Data manipulation in `03_merge_expression.R` | [5] |
+| dplyr | [xxx] | Data manipulation in `03_merge_expression.R` and manuscript-specific scripts | [6] |
+| stringr | [xxx] | String handling in `03_merge_expression.R` | [7] |
+| gtools | [xxx] | Mixed sorting of file names in `03_merge_expression.R` | [8] |
+| DESeq2 | [xxx] | Differential expression analysis | [9] |
+| ggplot2 | [xxx] | Data visualization | [10] |
+| Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [11] |
 
 ## References
 
@@ -91,8 +103,7 @@ The analysis script is provided in:
 
 [4] R Core Team. *R: A language and environment for statistical computing*. R Foundation for Statistical Computing, Vienna, Austria.
 
-[5] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H. *Welcome to the 
-tidyverse*. Journal of Open Source Software. 2019;4(43):1686. doi:10.21105/joss.01686
+[5] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H. *Welcome to the tidyverse*. Journal of Open Source Software. 2019;4(43):1686. doi:10.21105/joss.01686
 
 [6] Wickham H, François R, Henry L, Müller K, Vaughan D. *dplyr: A Grammar of Data Manipulation*. R package.
 
@@ -104,6 +115,7 @@ tidyverse*. Journal of Open Source Software. 2019;4(43):1686. doi:10.21105/joss.
 
 [10] Wickham H. *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York; 2016.
 
+[11] Python Software Foundation. *Python Language Reference*. Available at: https://www.python.org/
 
 ## Notes
 
@@ -111,3 +123,7 @@ Reference index files are not included in this repository.
 They should be rebuilt locally using the source FASTA/GTF files and `references/build_index.sh`.
 
 Some file paths and execution settings were simplified from the original computational environment for public release.
+
+## Manuscript-specific visualization
+
+Additional manuscript-specific visualization scripts, including the all-sample PCA script, are provided separately under the manuscript-specific analysis directory.
