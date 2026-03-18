@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+import sys
+import math
+from math import comb
+
 def mannwhitneyu(x, y, correction=False, method="auto", use_midp=False):
 
     x = list(x)
