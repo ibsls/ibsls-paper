@@ -1,6 +1,6 @@
 # Reference preparation
 
-This directory documents the reference files and commands used to prepare the RSEM reference for the RNA-seq workflow in the ibSLS paper.
+This directory documents the reference files and commands used to prepare the RSEM reference for the RNA-seq workflow in the ibSLS database.
 
 ## Overview
 
