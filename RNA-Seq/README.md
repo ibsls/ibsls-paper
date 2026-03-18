@@ -90,8 +90,7 @@ This script expands replicate counts from each comparison group, reconstructs th
 | stringr | [xxx] | String handling in `03_merge_expression.R` | [7] |
 | gtools | [xxx] | Mixed sorting of file names in `03_merge_expression.R` | [8] |
 | DESeq2 | [xxx] | Differential expression analysis | [9] |
-| ggplot2 | [xxx] | Data visualization | [10] |
-| Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [11] |
+| Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [10] |
 
 ## References
 
@@ -113,9 +112,7 @@ This script expands replicate counts from each comparison group, reconstructs th
 
 [9] Love MI, Huber W, Anders S. *Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2*. Genome Biology. 2014;15(12):550. doi:10.1186/s13059-014-0550-8
 
-[10] Wickham H. *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York; 2016.
-
-[11] Python Software Foundation. *Python Language Reference*. Available at: https://www.python.org/
+[10] Python Software Foundation. *Python Language Reference*. Available at: https://www.python.org/
 
 ## Notes
 
