@@ -1,4 +1,0 @@
-label	file_name	type	source	role	note
-genome_fasta	mm10_no_alt_analysis_set_ENCODE.fasta	FASTA	ENCODE	reference genome	mouse genome FASTA
-gene_annotation	gencode.vM20.basic.annotation.gtf	GTF	GENCODE vM20 basic	gene annotation	mouse gene annotation
-star_build_log	mm10_vM20Log.out	LOG	original analysis environment	build record	STAR genomeGenerate log retained as supplementary provenance
