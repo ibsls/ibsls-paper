@@ -15,18 +15,26 @@ set -euo pipefail
 #     /path/to/results \
 #     /path/to/references/mm10_vM20 \
 #     20
+# Notes:
+#   - `--star-gzipped-read-file` assumes gzipped FASTQ input.
+#   - `--star-output-genome-bam` enables genome BAM output from STAR.
+#   - `--strandedness reverse` assumes reverse-stranded RNA-seq libraries.
 
 SAMPLE_ID="$1"
 FASTQ="$2"
 OUTDIR="$3"
 REFERENCE_PREFIX="$4"
-THREADS="${5:-20}"
+STAR_PATH="$5"
+THREADS="${6:-20}"
 
 mkdir -p "${OUTDIR}"
 
 rsem-calculate-expression \
   --star \
+  --star-path "${STAR_PATH}" \
   --star-gzipped-read-file \
+  --star-output-genome-bam \
+  --strandedness reverse \
   -p "${THREADS}" \
   "${FASTQ}" \
   "${REFERENCE_PREFIX}" \
