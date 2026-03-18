@@ -14,13 +14,13 @@ library(DESeq2)
 #   - tab-delimited DEG result table
 #
 # Example:
-#   Rscript 04_deseq2_analysis.R \
+#   Rscript 05_deseq2_two_group.R \
 #     20241218_COUNTtable_for_MHU1_Spleen.tsv \
 #     DEG_20241218_COUNTtable_for_MHU1_Spleen_GCvsAG.tsv
 #
 # Notes:
-#   - DESeq2 is run with design = ~ condition
-#   - results are extracted with contrast = c("condition", "A", "B")
+#   - DESeq2 is run with design = ~ group
+#   - results are extracted with contrast = c("group", "A", "B")
 
 args <- commandArgs(trailingOnly = TRUE)
 
@@ -41,7 +41,6 @@ raw_data <- read.table(
 
 gene_id <- raw_data[, 1]
 
-# Group A counts are stored in column 3; group B counts are stored in column 2
 nA <- length(unlist(strsplit(raw_data[1, 3], split = ",")))
 nB <- length(unlist(strsplit(raw_data[1, 2], split = ",")))
 
@@ -55,17 +54,17 @@ count_mat <- round(count_mat)
 rownames(count_mat) <- gene_id
 colnames(count_mat) <- c(paste0("A", seq_len(nA)), paste0("B", seq_len(nB)))
 
-condition <- factor(c(rep("A", nA), rep("B", nB)), levels = c("B", "A"))
-colData <- data.frame(condition = condition, row.names = colnames(count_mat))
+group <- factor(c(rep("A", nA), rep("B", nB)), levels = c("B", "A"))
+colData <- data.frame(group = group, row.names = colnames(count_mat))
 
 dds <- DESeqDataSetFromMatrix(
   countData = count_mat,
   colData = colData,
-  design = ~ condition
+  design = ~ group
 )
 
 dds <- DESeq(dds)
-res <- results(dds, contrast = c("condition", "A", "B"))
+res <- results(dds, contrast = c("group", "A", "B"))
 
 pval <- res$pvalue
 qval <- res$padj
@@ -74,7 +73,6 @@ rank_val <- rank(pval, ties.method = "first", na.last = "keep")
 meanA <- rowMeans(count_mat[, seq_len(nA), drop = FALSE])
 meanB <- rowMeans(count_mat[, (nA + 1):(nA + nB), drop = FALSE])
 
-# Add a pseudocount to avoid division by zero
 log2_ratio <- log2((meanA + 1) / (meanB + 1))
 
 col7 <- ifelse(log2_ratio > 0, 1, 0)
