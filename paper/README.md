@@ -1,13 +1,22 @@
 
+# Manuscript-specific scripts
 
-# Scripts for paper
+This directory contains manuscript-specific scripts and notes associated with figures in the ibSLS paper.
 
-This file summarizes the main software tools used for RNA-seq data processing in the ibSLS paper.
+## Mission-specific centrifuge parameters for artificial gravity loading (Supplementary Figure S1)
 
-## xxx
-Raw RPM records underlying Supplementary Fig. S1 are provided as Supplementary Data associated with the paper.
-The manuscript Source Data includes the binned values used for plotting.
+Raw RPM records underlying Supplementary Fig. S1 are provided as Supplementary Data associated with the paper.  
+The manuscript Source Data includes the binned values used for plotting.  
 The scripts in this directory generate the binned data and figure panels from the raw RPM records.
+
+## PCA of transcriptome profiles across missions and tissues (Supplementary Figure S2)
+
+This directory includes the script used to generate the all-sample PCA shown in Supplementary Fig. S2.
+
+## Web-rendered bar-graph panels
+
+Some graph panels in the manuscript are screenshots from the ibSLS web interface, including gene-expression panels (Figs. 4c, 5d, and 7c; Supplementary Fig. S3b) and metabolite-abundance panels (Figs. 4f and 6d; Supplementary Fig. S4a-e).  
+The underlying numerical values are provided as Source Data, whereas standalone plotting scripts are not provided for these web-rendered panels.
 
 ## Core software
 
