@@ -8,7 +8,7 @@ This directory contains manuscript-specific scripts and notes associated with fi
 Raw RPM records underlying Supplementary Fig. S1 are provided as Supplementary Data associated with the paper.  
 The manuscript Source Data includes the binned values used for plotting.  
 The following scripts generate the binned data and figure panels from the raw RPM records.
-
+`scripts/
 
 ## PCA of transcriptome profiles across missions and tissues (Supplementary Figure S2)
 
