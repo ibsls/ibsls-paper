@@ -84,12 +84,12 @@ This script expands replicate counts from each comparison group, reconstructs th
 | STAR | 2.6.1d | RNA-seq reference preparation and read mapping. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [1] |
 | RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [2] |
 | samtools | 1.8 | BAM sorting and indexing | [3] |
-| R | [xxx] | Data processing and statistical analysis | [4] |
-| tidyverse | [xxx] | Data manipulation in `03_merge_expression.R` | [5] |
-| dplyr | [xxx] | Data manipulation in `03_merge_expression.R` and manuscript-specific scripts | [6] |
-| stringr | [xxx] | String handling in `03_merge_expression.R` | [7] |
-| gtools | [xxx] | Mixed sorting of file names in `03_merge_expression.R` | [8] |
-| DESeq2 | [xxx] | Differential expression analysis | [9] |
+| R | 4.1.2 | Data processing and statistical analysis | [4] |
+| tidyverse | 1.3.1 | Data manipulation in `03_merge_expression.R` | [5] |
+| dplyr | 1.0.8 | Data manipulation in `03_merge_expression.R` and manuscript-specific scripts | [6] |
+| stringr | 1.4.0 | String handling in `03_merge_expression.R` | [7] |
+| gtools | 3.9.5| Mixed sorting of file names in `03_merge_expression.R` | [8] |
+| DESeq2 | 1.34.0? | Differential expression analysis | [9] |
 | Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [10] |
 
 ## References
