@@ -1,13 +1,18 @@
 # ibsls-paper
 
-This repository contains scripts and workflow documentation associated with the ibSLS paper.
+This repository contains scripts and workflow documentation used for ibSLS database construction and manuscript-related analyses associated with the following manuscript currently under revision:
+
+**ibSLS: A Biobank for Democratizing Access to Multi-Omics Data and Biospecimens from Spaceflight Research
+**
+
+Authors: Akihito Otsuki, Yuichi Aoki, Risa Okada, Liam Baird, Daisuke Kamimura, Dai Shiba, Eiji Hishinuma, Seizo Koshiba, Fumiki Katsuoka, Kengo Kinoshita, Takafumi Suzuki, Akira Uruno and Masayuki Yamamoto
 
 ## Repository structure
 
-- `RNA-Seq/`: scripts and documentation for RNA-seq data processing, including reference preparation, expression quantification, merging of per-sample results, and differential expression analysis
-- `Metabolome/`: scripts and documentation for metabolome data processing and differential abundance metabolite (DAM) analysis
+- `RNA-Seq/`: scripts and documentation for RNA-seq workflows used for ibSLS database construction
+- `Metabolome/`: scripts and documentation for metabolome workflows used for ibSLS database construction
 - `paper/`: manuscript-specific scripts used for figure generation and processing of figure-related source data
-
+  
 ## RNA-Seq
 
 The `RNA-Seq/` directory contains scripts for:
