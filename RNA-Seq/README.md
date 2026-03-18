@@ -12,7 +12,7 @@ The workflow includes:
 3. read mapping performed internally with STAR during RSEM quantification
 4. BAM processing using samtools
 5. merging per-sample expression outputs for downstream analysis
-6. differentially expression analysis using DESeq2
+6. differential expression analysis using DESeq2
 
 ## Directory structure
 
