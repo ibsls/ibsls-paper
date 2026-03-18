@@ -18,7 +18,7 @@ library(ggplot2)
 #   - Median values of ElapsedDays and RPM are used for plotting.
 #   - The shaded interval corresponds to the range used for summary statistics.
 
-input_file <- "MHU-5_rpm.txt"
+input_file <- "SupplementaryDataS4.txt"
 source_data_file <- "SourceData_SuppFigS1d.csv"
 plot_file <- "MHU-5.bin10s.pdf"
 
