@@ -29,9 +29,9 @@ The underlying numerical values are provided as Source Data, whereas standalone 
 | Software | Version | Purpose | Ref. | 
 |---|---|---|---|
 | R | [xxx] | Data processing  and statistical analysis | [1] | 
-| tidyverse | [xxx] | Data manipulation in `03_merge_expression.R` | [2] | 
-| dplyr | [xxx] | Data manipulation in `03_merge_expression.R` | [3] | 
-| lubridate | [xxx] | String handling in `03_merge_expression.R` | [4] | 
+| tidyverse | [xxx] | Data manipulation | [2] | 
+| dplyr | [xxx] | Data manipulation | [3] | 
+| lubridate | [xxx] | Date handling | [4] | 
 | ggplot2 | [xxx] | Data visualization | [6] | 
 
 ## References
