@@ -83,7 +83,7 @@ This script expands replicate counts from each comparison group, reconstructs th
 |---|---|---|---|
 | STAR | 2.6.1d | RNA-seq reference preparation and read mapping. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [1] |
 | RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [2] |
-| samtools | [xxx] | BAM sorting and indexing | [3] |
+| samtools | 1.8 | BAM sorting and indexing | [3] |
 | R | [xxx] | Data processing and statistical analysis | [4] |
 | tidyverse | [xxx] | Data manipulation in `03_merge_expression.R` | [5] |
 | dplyr | [xxx] | Data manipulation in `03_merge_expression.R` and manuscript-specific scripts | [6] |
