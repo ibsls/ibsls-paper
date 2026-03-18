@@ -12,6 +12,7 @@ The workflow includes:
 3. read mapping performed internally with STAR during RSEM quantification
 4. BAM processing using samtools
 5. merging per-sample expression outputs for downstream analysis
+6. differentially expression analysis using DESeq2
 
 ## Directory structure
 
@@ -58,7 +59,12 @@ Per-sample expression outputs were merged using:
 
 This step generates a merged expression matrix for downstream analyses.
 
+### Differential expression analysis
 
+Differential expression analysis was performed using DESeq2 from compact count tables in which replicate counts for each comparison group were stored as comma-separated values.
+The analysis script is provided in:
+
+- `scripts/04_deseq2_analysis.R`
 
 ## Notes
 
