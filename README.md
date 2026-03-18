@@ -5,8 +5,6 @@ Scripts and workflow documentation for ibSLS database construction and manuscrip
 **ibSLS: A Biobank for Democratizing Access to Multi-Omics Data and Biospecimens from Spaceflight Research**  
 *Manuscript under revision*
 
-Akihito Otsuki, Yuichi Aoki, Risa Okada, Liam Baird, Daisuke Kamimura, Dai Shiba, Eiji Hishinuma, Seizo Koshiba, Fumiki Katsuoka, Kengo Kinoshita, Takafumi Suzuki, Akira Uruno, and Masayuki Yamamoto
-
 ## Repository structure
 
 - `RNA-Seq/`: scripts and documentation for RNA-seq workflows used for ibSLS database construction
