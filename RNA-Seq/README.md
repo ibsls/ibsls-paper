@@ -16,7 +16,7 @@ The workflow includes:
 
 ## Directory structure
 
-- `metadata/`: sample lists and example metadata tables
+- `examples/`: examples of sample lists and output tables
 - `references/`: reference preparation scripts and related documentation
 - `scripts/`: RNA-seq processing, aggregation, and differential expression analysis scripts
 
