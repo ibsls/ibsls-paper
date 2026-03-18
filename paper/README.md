@@ -1,7 +1,7 @@
 
-# Manuscript-specific scripts
+# Scripts and notes associated with figures in the ibSLS paper.
 
-This directory contains manuscript-specific scripts and notes associated with figures in the ibSLS paper.
+This directory contains scripts and notes associated with figures in the ibSLS paper.
 
 ## Mission-specific centrifuge parameters for artificial gravity loading
 
