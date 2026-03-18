@@ -59,7 +59,7 @@ Per-sample expression outputs were merged using:
 
 This step generates a merged expression matrix for downstream analyses.
 
-### Differential expression analysis
+## Differential expression analysis
 
 Differential expression analysis was performed using DESeq2 from compact count tables in which replicate counts for each comparison group were stored as comma-separated values.
 The analysis script is provided in:
