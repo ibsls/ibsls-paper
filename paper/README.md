@@ -3,11 +3,12 @@
 
 This directory contains manuscript-specific scripts and notes associated with figures in the ibSLS paper.
 
-## Mission-specific centrifuge parameters for artificial gravity loading (Supplementary Figure S1)
+## Mission-specific centrifuge parameters for artificial gravity loading
 
 Raw RPM records underlying Supplementary Fig. S1 are provided as Supplementary Data associated with the paper.  
 The manuscript Source Data includes the binned values used for plotting.  
-The scripts in this directory generate the binned data and figure panels from the raw RPM records.
+The following scripts generate the binned data and figure panels from the raw RPM records.
+
 
 ## PCA of transcriptome profiles across missions and tissues (Supplementary Figure S2)
 
