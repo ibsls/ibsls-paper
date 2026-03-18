@@ -1,11 +1,11 @@
 # ibsls-paper
 
-This repository contains scripts and workflow documentation used for ibSLS database construction and manuscript-related analyses associated with the following manuscript currently under revision:
+Scripts and workflow documentation for ibSLS database construction and manuscript-related analyses.
 
-**ibSLS: A Biobank for Democratizing Access to Multi-Omics Data and Biospecimens from Spaceflight Research
-**
+**ibSLS: A Biobank for Democratizing Access to Multi-Omics Data and Biospecimens from Spaceflight Research**  
+*Manuscript under revision*
 
-Authors: Akihito Otsuki, Yuichi Aoki, Risa Okada, Liam Baird, Daisuke Kamimura, Dai Shiba, Eiji Hishinuma, Seizo Koshiba, Fumiki Katsuoka, Kengo Kinoshita, Takafumi Suzuki, Akira Uruno and Masayuki Yamamoto
+Akihito Otsuki, Yuichi Aoki, Risa Okada, Liam Baird, Daisuke Kamimura, Dai Shiba, Eiji Hishinuma, Seizo Koshiba, Fumiki Katsuoka, Kengo Kinoshita, Takafumi Suzuki, Akira Uruno, and Masayuki Yamamoto
 
 ## Repository structure
 
