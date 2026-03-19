@@ -1,5 +1,5 @@
 
-# Scripts associated with figures in the ibSLS paper.
+# Scripts associated with figures in the ibSLS paper
 
 This directory contains scripts associated with selected figures in the ibSLS paper.
 
@@ -34,7 +34,7 @@ The underlying numerical values are provided as Source Data associated with the 
 | dplyr | 1.0.8 | Data manipulation | [3] | 
 | lubridate | 1.8.0 | Date handling | [4] | 
 | ggplot2 | 3.3.5 | Data visualization | [5] | 
-| ggsci | 4.2.0 | Data visualization | [6] |
+| ggsci | 4.2.0 | Color palettes for ggplot2 | [6] |
 
 ## References
 
