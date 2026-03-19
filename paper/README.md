@@ -48,5 +48,5 @@ The underlying numerical values are provided as Source Data associated with the 
 
 [5] H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016.
 
-[6]  Xiao N (2025). _ggsci: Scientific Journal and Sci-Fi Themed Color Palettes for 'ggplot2'_. doi:10.32614/CRAN.package.ggsci <https://doi.org/10.32614/CRAN.package.ggsci>, R package version 4.2.0, <https://CRAN.R-project.org/package=ggsci>.
+[6]  Xiao N (2025). _ggsci: Scientific Journal and Sci-Fi Themed Color Palettes for 'ggplot2'_. doi:10.32614/CRAN.package.ggsci <https://doi.org/10.32614/CRAN.package.ggsci>
 
