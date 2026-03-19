@@ -25,7 +25,7 @@ The following annotation table was derived from the GTF file. This table is not 
 
 | File_name | Derived from | Description |
 |---|---|---|
-| idlist_vM20.tsv | gencode.vM20.basic.annotation.gtf | Tab-delimited table containing gene IDs, gene symbols, and related annotation fields extracted from the GTF file |
+| idlist_vM20.tsv | gencode.vM20.basic.annotation.gtf | Tab-delimited table containing ENSEMBLE gene IDs, gene symbols, and related annotation fields extracted from the GTF file |
 
 ## Build script
 
