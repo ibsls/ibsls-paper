@@ -15,7 +15,7 @@ library(gtools)
 #   - idlist_vM20.tsv is used as the annotation table.
 #   - Column names of merged expression values are derived from file names.
 
-id <- read.table("../references/annotation/idlist_vM20.tsv",
+id <- read.table("../references/idlist_vM20.tsv",
                  sep = "\t", header = TRUE, check.names = FALSE)
 
 List <- list.files(pattern = "\\.genes.results$") %>%
