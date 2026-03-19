@@ -19,6 +19,14 @@ The following source files were used:
 
 [2] https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M20/gencode.vM20.basic.annotation.gtf.gz
 
+## Derived annotation table
+
+The following annotation table was derived from the GTF file.  
+This table is not required for RSEM reference construction itself, but was retained as a companion annotation resource for downstream use in ibSLS.  
+
+| File_name | Derived from | Description |
+|---|---|---|
+| idlist_vM20.tsv | gencode.vM20.basic.annotation.gtf | Tab-delimited table containing gene IDs, gene symbols, and related annotation fields extracted from the GTF file |
 
 ## Build script
 
