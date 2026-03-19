@@ -9,7 +9,7 @@ Scripts and workflow documentation for ibSLS database construction and manuscrip
 
 - `RNA-Seq/`: scripts and documentation for RNA-seq workflows used for ibSLS database construction
 - `Metabolome/`: scripts and documentation for metabolome workflows used for ibSLS database construction
-- `paper/`: manuscript-specific scripts used for figure generation and processing of figure-related source data
+- `paper/`: manuscript-specific scripts used for processing of figure-related source data and figure generation 
   
 ## RNA-Seq
 
