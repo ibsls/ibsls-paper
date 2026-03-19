@@ -21,8 +21,7 @@ The following source files were used:
 
 ## Derived annotation table
 
-The following annotation table was derived from the GTF file.  
-This table is not required for RSEM reference construction itself, but was retained as a companion annotation resource for downstream use in ibSLS.  
+The following annotation table was derived from the GTF file. This table is not required for RSEM reference construction itself, but was retained as a companion annotation resource for downstream use in ibSLS.  
 
 | File_name | Derived from | Description |
 |---|---|---|
