@@ -119,8 +119,6 @@ This script expands replicate counts from each comparison group, reconstructs th
 Reference index files are not included in this repository.
 They should be rebuilt locally using the source FASTA/GTF files and `references/build_index.sh`.
 
-Some file paths and execution settings were simplified from the original computational environment for public release.
-
 ## Manuscript-specific visualization
 
 Additional manuscript-specific visualization scripts, including the all-sample PCA script, are provided separately under the manuscript-specific analysis directory.
