@@ -1,6 +1,6 @@
 # ibsls-paper
 
-Scripts and workflow documentation for ibSLS database construction and manuscript-related analyses.
+This repository provides custom scripts and workflow documentation used for data processing and manuscript-related analyses associated with the ibSLS paper.
 
 **ibSLS: A Biobank for Democratizing Access to Multi-Omics Data and Biospecimens from Spaceflight Research**  
 *Manuscript under revision*
@@ -48,18 +48,6 @@ The `paper/` directory contains scripts used for manuscript-specific analyses an
 For details, see:
 
 - `paper/README.md`
-
-## Scope
-
-This repository provides custom scripts and workflow documentation used for data processing and manuscript-related analyses associated with the ibSLS paper.
-
-The repository does not redistribute:
-
-- controlled-access datasets
-- large intermediate files
-- prebuilt reference index files for STAR or RSEM
-
-Reference files should be rebuilt locally using the scripts and source information provided in the corresponding subdirectories.
 
 ## License
 
