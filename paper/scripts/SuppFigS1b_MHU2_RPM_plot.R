@@ -36,6 +36,13 @@ binned <- d %>%
     .groups = "drop"
   )
 
+write.csv(
+  binned %>% select(ElapsedDays, RPM),
+  source_data_file,
+  quote = FALSE,
+  row.names = FALSE
+)
+
 summary_df <- d %>%
   filter(ElapsedDays > 0.4 & ElapsedDays < 4.5) %>%
   summarise(
