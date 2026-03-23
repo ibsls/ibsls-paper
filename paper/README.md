@@ -9,16 +9,16 @@ Raw RPM records underlying Supplementary Fig. S1 are provided as Supplementary D
 The manuscript Source Data includes the binned values used for plotting.  
 The following scripts generate the binned data and figure panels from the raw RPM records.
 
-- `scripts/SuppFigS1a_MHU1_RPM_plot.R`
-- `scripts/SuppFigS1b_MHU2_RPM_plot.R`
-- `scripts/SuppFigS1c_MHU4_RPM_plot.R`
-- `scripts/SuppFigS1d_MHU5_RPM_plot.R`
+- `scripts/SuppFig1a_MHU1_RPM_plot.R`
+- `scripts/SuppFig1b_MHU2_RPM_plot.R`
+- `scripts/SuppFig1c_MHU4_RPM_plot.R`
+- `scripts/SuppFig1d_MHU5_RPM_plot.R`
 
 ## PCA of transcriptome profiles across missions and tissues
 
 The following script was used to generate the all-sample PCA shown in Supplementary Fig. S2.  
 
-- `scripts/SuppFigS2_pca_plot.R`  
+- `scripts/SuppFig2_pca_plot.R`  
 
 ## Web-rendered panels
 
