@@ -25,7 +25,7 @@ plot_file <- "MHU-2.bin10s.pdf"
 
 d <- read.table(input_file, header = FALSE, sep = "\t", stringsAsFactors = FALSE) %>%
   mutate(
-    Date = as.POSIXct(paste(Date), format = "%Y/%m/%d %H:%M:%S"),
+    Date = as.POSIXct(Date, format = "%Y/%m/%d %H:%M:%S"),
     RPM = as.numeric(RPM),
     ElapsedDays = as.numeric(Date - first(Date), units = "days")
   )
