@@ -9,7 +9,7 @@ library(lubridate)
 # Generate binned source data and a plot for Supplementary Figure S1d (MHU-5).
 #
 # Input:
-#   - SupplementaryDataS4.txt
+#   - SupplementaryData13.txt
 #
 # Output:
 #   - SourceData_SuppFigS1d.csv
@@ -20,14 +20,14 @@ library(lubridate)
 #   - Median values of ElapsedDays and RPM are used for plotting.
 #   - The shaded interval corresponds to the range used for summary statistics.
 
-input_file <- "SupplementaryDataS4.txt"
+input_file <- "SupplementaryData13.txt"
 source_data_file <- "SourceData_SuppFigS1d.csv"
 plot_file <- "MHU-5.bin10s.pdf"
 
-d <- read.table(input_file, header = FALSE, sep = "\t", stringsAsFactors = FALSE) %>%
+d <- read.table(input_file, header = TRUE, sep = "\t", stringsAsFactors = FALSE) %>%
   mutate(
-    Date = as.POSIXct(paste(V1, V2), format = "%Y/%m/%d %H:%M:%S"),
-    RPM = as.numeric(V3),
+    Date = as.POSIXct(Date, format = "%Y/%m/%d %H:%M:%S"),
+    RPM = as.numeric(RPM),
     ElapsedDays = as.numeric(Date - first(Date), units = "days")
   )
 
