@@ -8,10 +8,8 @@ library(lubridate)
 # Generate binned source data and a plot for Supplementary Figure S1a (MHU-1).
 #
 # Input:
-#   - SupplementaryDataS1.txt
-#
+#   - SourceData_SuppFig1a.csv
 # Output:
-#   - SourceData_SuppFigS1a.csv
 #   - MHU-1.bin10s.pdf
 #
 # Notes:
@@ -19,14 +17,13 @@ library(lubridate)
 #   - Median values of ElapsedDays and RPM are used for plotting.
 #   - The shaded interval corresponds to the range used for summary statistics.
 
-input_file <- "SupplementaryDataS1.txt"
-source_data_file <- "SourceData_SuppFigS1a.csv"
+input_file <- "SourceData_SuppFig1a.csv"
 plot_file <- "MHU-1.bin10s.pdf"
 
-d <- read.table(input_file, header = FALSE, sep = " ", stringsAsFactors = FALSE) %>%
+d <- read.table(input_file, header = FALSE, sep = "\t", stringsAsFactors = FALSE) %>%
   mutate(
-    Date = as.POSIXct(paste(V1, V2), format = "%Y/%m/%d %H:%M:%S"),
-    RPM = as.numeric(V3),
+    Date = as.POSIXct(paste(Date), format = "%Y/%m/%d %H:%M:%S"),
+    RPM = as.numeric(RPM),
     ElapsedDays = as.numeric(Date - first(Date), units = "days")
   )
 
@@ -38,13 +35,6 @@ binned <- d %>%
     RPM = median(RPM, na.rm = TRUE),
     .groups = "drop"
   )
-
-write.csv(
-  binned %>% select(ElapsedDays, RPM),
-  source_data_file,
-  quote = FALSE,
-  row.names = FALSE
-)
 
 summary_df <- d %>%
   filter(ElapsedDays > 0.4 & ElapsedDays < 4.5) %>%
