@@ -20,22 +20,17 @@ The workflow includes:
 - `references/`: reference preparation scripts and related documentation
 - `scripts/`: RNA-seq processing, aggregation, and differential expression analysis scripts
 
-## Reference preparation
-
+## Reference preparation  
 Reference preparation is described in:  
-- `references/README.md`
-
+- `references/README.md`  
 Script:  
-- `references/build_index.sh`
-
+- `references/build_index.sh`  
 Input:  
 - reference genome FASTA
-- gene annotation GTF
-
+- gene annotation GTF  
 Output:  
 - RSEM reference files  
 - STAR index files  
-
 
 ## Quantification
 
