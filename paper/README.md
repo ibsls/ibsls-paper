@@ -60,6 +60,7 @@ Install the required R packages before running the scripts:
 
 ```r
 install.packages(c("tidyverse", "dplyr", "lubridate", "ggplot2", "ggsci"))
+```
 
 ## References
 
