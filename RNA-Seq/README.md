@@ -32,6 +32,23 @@ The reference was prepared using:
 
 This script uses `rsem-prepare-reference --star` to generate the RSEM reference together with STAR-compatible index files.
 
+### Input
+
+- reference genome FASTA
+- gene annotation GTF
+
+### Output
+
+- RSEM reference files
+- STAR genome index files
+
+### Example
+
+```bash
+bash references/build_index.sh
+```
+
+
 ## Quantification
 
 Expression quantification was performed using `rsem-calculate-expression`.
@@ -91,6 +108,10 @@ This script expands replicate counts from each comparison group, reconstructs th
 | gtools | 3.9.5| Mixed sorting of file names in `03_merge_expression.R` | [8] |
 | DESeq2 | 1.38.3 | Differential expression analysis | [9] |
 | Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [10] |
+
+## Expected run time
+
+Typically several hours per sample, depending on read depth and computing environment.
 
 ## References
 
