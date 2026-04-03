@@ -14,6 +14,22 @@ The following scripts generate the binned data and figure panels from the raw RP
 - `scripts/SuppFig1c_MHU4_RPM_plot.R`
 - `scripts/SuppFig1d_MHU5_RPM_plot.R`
 
+### Input data
+
+Each script expects the corresponding raw RPM record file as input in tab-delimited text format, as provided in the Supplementary Data.
+
+### Output
+
+Each script produces:
+
+- a CSV file containing the binned RPM values used for plotting
+- a PDF file containing the corresponding figure panel
+
+### Example
+
+```bash
+Rscript scripts/SuppFig1a_MHU1_RPM_plot.R
+
 ## PCA of transcriptome profiles across missions and tissues
 
 The following script was used to generate the all-sample PCA shown in Supplementary Fig. 2.  
@@ -25,7 +41,9 @@ The following script was used to generate the all-sample PCA shown in Supplement
 Some graph panels in the manuscript were rendered through the ibSLS web interface, including gene-expression bar graphs (Figs. 4c, 5d, and 7c; Supplementary Fig. 3b), metabolite-abundance bar graphs (Figs. 4f and 6d; Supplementary Fig. 4a–e), and a gene-expression heatmap (Fig. 5c).  
 The underlying numerical values are provided as Source Data associated with the paper. Standalone plotting scripts are not provided because these panels were generated interactively within the ibSLS web interface. The manuscript illustrates the corresponding navigation paths and representatitve query settings used to access and render these panels.
 
-## Software used in these scripts
+## System requirements
+
+The scripts were developed and tested in the following environment:
 
 | Software | Version | Purpose | Ref. | 
 |---|---|---|---|
@@ -35,6 +53,13 @@ The underlying numerical values are provided as Source Data associated with the 
 | lubridate | 1.8.0 | Date handling | [4] | 
 | ggplot2 | 3.3.5 | Data visualization | [5] | 
 | ggsci | 4.2.0 | Color palettes for ggplot2 | [6] |
+
+## Installation
+
+Install the required R packages before running the scripts:
+
+```r
+install.packages(c("tidyverse", "dplyr", "lubridate", "ggplot2", "ggsci"))
 
 ## References
 
