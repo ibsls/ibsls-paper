@@ -26,39 +26,37 @@ Reference preparation is described in:
 
 - `references/README.md`
 
-The reference was prepared using:
-
+Script:
 - `references/build_index.sh`
 
-This script uses `rsem-prepare-reference --star` to generate the RSEM reference together with STAR-compatible index files.
-
-### Input
-
+Input:
 - reference genome FASTA
 - gene annotation GTF
 
-### Output
-
+Output:
 - RSEM reference files
-- STAR genome index files
-
-### Example
-
-```bash
-bash references/build_index.sh
-```
+- STAR index files
 
 
 ## Quantification
 
-Expression quantification was performed using `rsem-calculate-expression`.
+Expression quantification was performed using `rsem-calculate-expression`.  
+During this step, read mapping was carried out internally with STAR through the `--star` option.  
+Separate scripts are provided for paired-end and single-end RNA-seq data:  
 
-During this step, read mapping was carried out internally with STAR through the `--star` option.
-
-Separate scripts are provided for paired-end and single-end RNA-seq data:
-
+Scripts:
 - `scripts/01_rsem_quantification_paired.sh`
 - `scripts/01_rsem_quantification_single.sh`
+
+Input:
+- FASTQ files
+- reference prefix
+
+Output:
+- per-sample `.genes.results`
+- per-sample `.isoforms.results`
+- BAM files
+
 
 ## BAM processing
 
