@@ -21,7 +21,6 @@ Each script expects the corresponding raw RPM record file as input in tab-delimi
 ### Output
 
 Each script produces:
-
 - a CSV file containing the binned RPM values used for plotting
 - a PDF file containing the corresponding figure panel
 
@@ -29,6 +28,7 @@ Each script produces:
 
 ```bash
 Rscript scripts/SuppFig1a_MHU1_RPM_plot.R
+```
 
 ## PCA of transcriptome profiles across missions and tissues
 
