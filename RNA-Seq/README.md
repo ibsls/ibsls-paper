@@ -111,7 +111,7 @@ This script expands replicate counts from each comparison group, reconstructs th
 
 ## Expected run time
 
-Typically several hours per sample, depending on read depth and computing environment.
+Each step typically requires several hours per sample, depending on read depth and computing environment.
 
 ## References
 
