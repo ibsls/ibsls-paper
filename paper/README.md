@@ -30,7 +30,7 @@ Rscript scripts/SuppFig1a_MHU1_RPM_plot.R
 Example output files:
 - `SourceData_SuppFigS1a.csv`
 - `MHU-1.bin10s.pdf`
-- 
+
 ### Expected run time
 On a typical desktop computer, each RPM plotting script should complete within a few seconds.
 
