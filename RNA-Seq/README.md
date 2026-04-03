@@ -22,20 +22,19 @@ The workflow includes:
 
 ## Reference preparation
 
-Reference preparation is described in:
-
+Reference preparation is described in:  
 - `references/README.md`
 
-Script:
+Script:  
 - `references/build_index.sh`
 
-Input:
+Input:  
 - reference genome FASTA
 - gene annotation GTF
 
-Output:
-- RSEM reference files
-- STAR index files
+Output:  
+- RSEM reference files  
+- STAR index files  
 
 
 ## Quantification
