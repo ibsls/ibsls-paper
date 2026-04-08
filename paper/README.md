@@ -91,35 +91,5 @@ On a typical desktop computer, the script should complete within a few minutes, 
 Some graph panels in the manuscript were rendered through the ibSLS web interface, including gene-expression bar graphs (Figs. 4c, 5d, and 7c; Supplementary Fig. 3b), metabolite-abundance bar graphs (Figs. 4f and 6d; Supplementary Fig. 4a–e), and a gene-expression heatmap (Fig. 5c).  
 The underlying numerical values are provided as Source Data associated with the paper. Standalone plotting scripts are not provided because these panels were generated interactively within the ibSLS web interface. The manuscript illustrates the corresponding navigation paths and representatitve query settings used to access and render these panels.
 
-## System requirements
 
-The scripts were developed and tested in the following environment:
-
-| Software | Version | Purpose | Ref. | 
-|---|---|---|---|
-| R | 4.1.2 | Data processing  and statistical analysis | [1] | 
-| tidyverse | 1.3.1 | Data manipulation | [2] | 
-| dplyr | 1.0.8 | Data manipulation | [3] | 
-| lubridate | 1.8.0 | Date handling | [4] | 
-| ggplot2 | 3.3.5 | Data visualization | [5] | 
-
-## Installation
-
-Install the required R packages before running the scripts:
-
-```r
-install.packages(c("tidyverse", "dplyr", "lubridate", "ggplot2", "ggsci"))
-```
-
-## References
-
-[1] R Core Team. *R: A language and environment for statistical computing*. R Foundation for Statistical Computing, Vienna, Austria.
-
-[2] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019). “Welcome to the tidyverse.” _Journal of Open Source Software_, *4*(43), 1686. doi:10.21105/joss.01686.
-
-[3] Wickham H, François R, Henry L, Müller K, Vaughan D (2026). _dplyr: A Grammar of Data Manipulation_. doi:10.32614/CRAN.package.dplyr. 
-
-[4] Garrett Grolemund, Hadley Wickham (2011). Dates and Times Made Easy with lubridate. Journal of Statistical Software, 40(3), 1-25. 
-
-[5] H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016.
 
