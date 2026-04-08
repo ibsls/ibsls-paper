@@ -12,12 +12,12 @@ See `SuppFig1_MARSparameters/README.md` for details.
 
 ## PCA of transcriptome profiles across missions and tissues
 
-The script used to generate the PCA across all samples shown in Supplementary Fig. 2 is described in:
+The script used to generate the PCA score table underlying Supplementary Fig. 2 is described in:
 
-See `SuppFig2_pca/README.md` for more details.
+`SuppFig2_pca/README.md`
 
 ## Web-rendered panels
 
-Some graph panels in the manuscript were rendered through the ibSLS web interface, including gene-expression bar graphs (Figs. 4c, 5d, and 7c; Supplementary Fig. 3b), metabolite-abundance bar graphs (Figs. 4f and 6d; Supplementary Fig. 4a–e), and a gene-expression heatmap (Fig. 5c).
+Some graph panels in the manuscript were rendered through the ibSLS web interface, including gene-expression bar graphs (Figs. 4c, 5d, and 7c; Supplementary Fig. 3b), metabolite-abundance bar graphs (Figs. 4f and 6d; Supplementary Fig. 4a–e), and the PCA visualization (Supplementary Fig 2).
 
 The underlying numerical values are provided as Source Data associated with the paper. Standalone plotting scripts are not provided because these panels were generated interactively within the ibSLS web interface. The manuscript illustrates the corresponding navigation paths and representative query settings used to access and render these panels.
