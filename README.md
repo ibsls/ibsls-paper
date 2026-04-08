@@ -17,14 +17,11 @@ The `RNA-Seq/` directory contains scripts for:
 
 - preparation of RSEM references with STAR-compatible index files
 - RNA-seq expression quantification using RSEM
-- BAM sorting and indexing using samtools
 - merging of per-sample gene-level expression outputs
 - generation of compact count tables for group-wise comparison
 - differential expression analysis using DESeq2
 
-For details, see:
-
-- `RNA-Seq/README.md`
+For details, see `RNA-Seq/README.md`
 
 ## Metabolome
 
@@ -34,20 +31,18 @@ The `Metabolome/` directory contains scripts for:
 - statistical testing for two-group comparison
 - generation of differential abundance metabolite (DAM) result tables
 
-For details, see:
-
-- `Metabolome/README.md`
+For details, see `Metabolome/README.md`
 
 ## Manuscript-specific scripts
 
-The `paper/` directory contains scripts used for manuscript-specific analyses and figure generation, including:
+The `paper/` directory contains scripts and documentation for selected manuscript-related analyses, including:
 
-- mission-specific RPM plots and binned source data for Supplementary Figure S1
-- all-sample PCA plotting for Supplementary Figure S2
+- mission-specific RPM plots and binned source data for Supplementary Fig. 1
+- generation of the PCA score table underlying Supplementary Fig. 2
 
-For details, see:
+Some manuscript panels were rendered through the ibSLS web interface rather than generated as standalone plotting scripts.
 
-- `paper/README.md`
+For details, see `paper/README.md`.
 
 ## License
 
