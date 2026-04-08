@@ -35,22 +35,17 @@ Scripts: `scripts/01_rsem_quantification_paired.sh` (for paired-end data) or `sc
 
 Input: `FASTQ file`, `index`
 
-Output: `.genes.results` (per-sample gene-level expression marix), `.isoforms.results` (per-sample isoform-level expression marix), `BAM files`
+Output: `*.genes.results` (per-sample gene-level expression marix), `.isoforms.results` (per-sample isoform-level expression marix), `BAM files`
 
 ## 3. Merging expression results
 
-Merges per-sample RSEM gene-level result files and appends gene annotations.
+Merges per-sample RSEM gene-level result files to generate gene-level expression matrix for downstream analyses.
 
 Scripts: `scripts/03_merge_expression.R`
 
-Input: 
-- `../references/idlist_vM20.tsv`
-- `*.genes.results`
+Input: `../references/idlist_vM20.tsv`, `*.genes.results`
 
-Output:  
-- merged gene-level expression table
-
-This step generates a merged gene-level expression matrix for downstream analyses.
+Output: `merged.genes.results.txt` (merged gene-level expression table)   
 
 ## 4. Generation of compact count tables
 
