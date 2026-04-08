@@ -110,11 +110,4 @@ Each step typically requires several hours per sample, depending on read depth a
 
 [10] Python Software Foundation. *Python Language Reference*. Available at: https://www.python.org/
 
-## Notes
 
-Reference index files are not included in this repository.
-They should be rebuilt locally using the source FASTA/GTF files and `references/build_index.sh`.
-
-## Manuscript-specific visualization
-
-Additional manuscript-specific visualization scripts, including the all-sample PCA script, are provided separately under the manuscript-specific analysis directory.
