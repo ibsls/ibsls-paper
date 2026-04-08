@@ -53,7 +53,7 @@ The scripts were developed and tested in the following environment:
 Install the required R packages before running the scripts:
 
 ```r
-install.packages(c("tidyverse", "dplyr"))
+install.packages(c("tidyverse", "dplyr", "gtools"))
 ```
 
 ## Expected run time
