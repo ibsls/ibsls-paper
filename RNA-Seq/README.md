@@ -33,15 +33,18 @@ During this step, read mapping was carried out internally with STAR through the 
 
 Scripts: `scripts/01_rsem_quantification_paired.sh` (for paired-end data) or `scripts/01_rsem_quantification_single.sh` (for single-end data).  
 
-Input: `FASTQ file`, `index`
+Inputs: FASTQ file(s), RSEM reference prefix, STAR binary directory
 
-Output: `*.genes.results` (per-sample gene-level expression marix), `.isoforms.results` (per-sample isoform-level expression marix), `BAM files`
+Outputs:
+- `*.genes.results` (per-sample gene-level expression matrix)
+- `*.isoforms.results` (per-sample isoform-level expression matrix)
+- genome-aligned BAM files
 
 ## Merging expression results
 
 Merges per-sample RSEM gene-level result files to generate gene-level expression matrix for downstream analyses.
 
-Script: `scripts/03_merge_expression.R`
+Script: `scripts/02_merge_expression.R`
 
 Input: `../references/idlist_vM20.tsv`, `*.genes.results`
 
@@ -49,14 +52,15 @@ Output: `merged.genes.results.txt` (merged gene-level expression table)
 
 ## Generation of compact count tables
 
-Generates compact count tables for DESeq2 from a merged gene expression table.
+Generates compact count tables for DESeq2 from the merged gene expression table.
 
 Script: `scripts/03_make_count_table.py`
 
-Inputs: `sample_list.csv` (sample-level annotation needed for group-wise aggregation of expression counts), `merged.genes.results.txt`
+Inputs:
+- `sample_list.csv` (sample-level annotation used for group-wise aggregation of expression counts)
+- `merged.genes.results.txt`
 
-Output: `count_table.tsv` (tab-delimited table in which groups are separated into columns, and replicate counts within each group are represented as comma-separated values in each cell)   
-
+Output: `count_table.tsv` (grouped count table for downstream DESeq2 analysis)   
 
 ## 5. Differential expression analysis
 
