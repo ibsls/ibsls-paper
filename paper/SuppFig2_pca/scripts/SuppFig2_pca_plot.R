@@ -38,18 +38,16 @@ samples <- read.table("sample_metadata.tsv", sep = "\t", header = TRUE, check.na
 List <- list.files("files/", pattern = "\\.genes.results$", full.names = TRUE) %>%
   mixedsort()
 
-d <- do.call(
-  cbind,
-  lapply(
-    List,
-    FUN = function(x) {
-      aColumn <- read.table(x, header = TRUE, check.names = TRUE)[, c("gene_id", "transcript_id.s.", "expected_count", "TPM")]
-      sample <- gsub("_vM20.genes.results", "", basename(x))
-      colnames(aColumn)[3] <- paste(sample, "expected_count", sep = "|")
-      colnames(aColumn)[4] <- paste(sample, "TPM", sep = "|")
-      aColumn
-    }
-  )
+d <- do.call(cbind,
+             lapply(List,
+                    FUN=function(x) { 
+                      aColumn <- read.table(x,header=T)[,c("gene_id","transcript_id.s.","expected_count","TPM")];
+                      sample <-gsub("_vM20.genes.results","",basename(x))
+                      colnames(aColumn)[3] = paste(sample,"expected_count",sep="|");
+                      colnames(aColumn)[4] = paste(sample,"TPM",sep="|");
+                      aColumn;
+                    }
+             )
 )
 
 d <- d[, !duplicated(colnames(d))] %>%
