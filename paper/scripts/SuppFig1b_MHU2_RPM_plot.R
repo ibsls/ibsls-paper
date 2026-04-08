@@ -5,14 +5,14 @@ library(tidyverse)
 library(ggplot2)
 library(lubridate)
 
-# Generate binned source data and a plot for Supplementary Figure S1d (MHU-5).
+# Generate binned source data and a plot for Supplementary Figure 1b (MHU-2).
 #
 # Input:
 #   - SupplementaryData10.txt
 #
 # Output:
-#   - SourceData_SuppFigS1a.csv
-#   - MHU-1.bin10s.pdf
+#   - SourceData_SuppFig1b.csv
+#   - MHU-2.bin10s.pdf
 #
 # Notes:
 #   - Raw RPM records are aggregated into 10-row bins.
@@ -20,7 +20,7 @@ library(lubridate)
 #   - The shaded interval corresponds to the range used for summary statistics.
 
 input_file <- "SupplementaryData11.txt"
-source_data_file <- "SourceData_SuppFigS1b.csv"
+source_data_file <- "SourceData_SuppFig1b.csv"
 plot_file <- "MHU-2.bin10s.pdf"
 
 d <- read.table(input_file, header = FALSE, sep = "\t", stringsAsFactors = FALSE) %>%
