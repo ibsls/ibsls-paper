@@ -6,7 +6,7 @@ library(dplyr)
 library(gtools)
 library(ggsci)
 
-# Generate all-sample PCA plots from per-sample RSEM gene-level results.
+# Generate PCA score data from per-sample RSEM gene-level results.
 #
 # Required input files:
 #   - sample_metadata.tsv
@@ -15,8 +15,8 @@ library(ggsci)
 # Required columns in sample_metadata.tsv:
 #   - ibSLSDataID  
 #   - ibSLSDataReleaseID
-#   - TissueName
-#   - MissionID
+#   - Tissue
+#   - Mission
 #   - Group
 #
 # Output files:
@@ -30,7 +30,7 @@ samples <- read.table("sample_metadata.tsv", sep = "\t", header = TRUE, check.na
   select(
     ibSLSDataID,
     ibSLSDataReleaseID,
-    TissueName,
+    Tissue,
     Mission,
     Group
   ) 
@@ -42,7 +42,7 @@ d <- do.call(cbind,
              lapply(List,
                     FUN=function(x) { 
                       aColumn <- read.table(x,header=T)[,c("gene_id","transcript_id.s.","expected_count","TPM")];
-                      sample <-gsub("_vM20.genes.results","",basename(x))
+                      sample <-gsub("\\.genes\\.results$","",basename(x))
                       colnames(aColumn)[3] = paste(sample,"expected_count",sep="|");
                       colnames(aColumn)[4] = paste(sample,"TPM",sep="|");
                       aColumn;
@@ -76,12 +76,11 @@ tpm <- d %>%
   column_to_rownames("gene_id")
 
 pca <- prcomp(t(tpm), scale. = TRUE)
-s <- summary(pca)
 
 score <- as.data.frame(pca$x) %>%
   rownames_to_column("ibSLSDataID") %>%
   left_join(samples, by = "ibSLSDataID") %>%
-select(ibSLSDataReleaseID,Mission,Tissue,GroupName,PC1,PC2)
+select(ibSLSDataReleaseID,Mission,Tissue,Group,PC1,PC2)
 
 write.csv(score, "SourceData_SuppFig2.csv", quote = FALSE, row.names = FALSE)
 
