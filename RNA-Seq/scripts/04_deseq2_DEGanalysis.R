@@ -14,7 +14,7 @@ library(DESeq2)
 #   - tab-delimited DEG result table
 #
 # Example:
-#   Rscript 05_deseq2_DEGanalysis.R \
+#   Rscript 04_deseq2_DEGanalysis.R \
 #     20241218_COUNTtable_for_MHU1_Spleen.tsv \
 #     DEG_20241218_COUNTtable_for_MHU1_Spleen_GCvsAG.tsv
 #
