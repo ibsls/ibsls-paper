@@ -10,7 +10,7 @@ library(ggsci)
 #
 # Required input files:
 #   - sample_metadata.tsv
-#   - files/used/*.genes.results
+#   - *.genes.results (output files from RSEM)
 #
 # Required columns in sample_metadata.tsv:
 #   - ibSLSDataID
