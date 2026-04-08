@@ -41,17 +41,16 @@ List <- list.files("files/", pattern = "\\.genes.results$", full.names = TRUE) %
 d <- do.call(cbind,
              lapply(List,
                     FUN=function(x) { 
-                      aColumn <- read.table(x,header=T)[,c("gene_id","transcript_id.s.","expected_count","TPM")];
+                      aColumn <- read.table(x,header=T)[,c("gene_id","expected_count","TPM")];
                       sample <-gsub("\\.genes\\.results$","",basename(x))
-                      colnames(aColumn)[3] = paste(sample,"expected_count",sep="|");
-                      colnames(aColumn)[4] = paste(sample,"TPM",sep="|");
+                      colnames(aColumn)[2] = paste(sample,"expected_count",sep="|");
+                      colnames(aColumn)[3] = paste(sample,"TPM",sep="|");
                       aColumn;
                     }
              )
 )
 
-d <- d[, !duplicated(colnames(d))] %>%
-  select(-transcript_id.s.)
+d <- d[, !duplicated(colnames(d))]
 
 tpm <- d %>%
   select(gene_id, ends_with("TPM")) %>%
