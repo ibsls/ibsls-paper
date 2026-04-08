@@ -30,13 +30,12 @@ library(ggsci)
 samples <- read.table("sample_metadata.tsv", sep = "\t", header = TRUE, check.names = FALSE) %>%
   select(
     ibSLSDataID,
-    Tissues_TissueID,
-    Tissues_TissueName,
-    Missions_MissionID,
-    ExperimentGroups_GroupID
+    TissueName,
+    MissionID,
+    Group
   ) 
 
-List <- list.files("files/used", pattern = "\\.genes.results$", full.names = TRUE) %>%
+List <- list.files("files/", pattern = "\\.genes.results$", full.names = TRUE) %>%
   mixedsort()
 
 d <- do.call(
