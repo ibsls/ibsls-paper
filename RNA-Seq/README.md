@@ -80,8 +80,8 @@ This script expands replicate counts from each group, reconstructs the count mat
 
 | Software | Version | Purpose | Ref. |
 |---|---|---|---|
-| STAR | 2.6.1d | RNA-seq reference preparation and read mapping. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [1] |
-| RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [2] |
+| STAR | 2.6.1d | RNA-seq reference preparation and read mapping. | [1] |
+| RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. | [2] |
 | R | 4.1.2 and 4.2.2| Data processing and statistical analysis | [3] |
 | tidyverse | 1.3.1 | Data manipulation in `02_merge_expression.R` | [4] |
 | dplyr | 1.0.8 | Data manipulation in `02_merge_expression.R` | [5] |
