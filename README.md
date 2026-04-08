@@ -1,6 +1,6 @@
 # ibsls-paper
 
-This repository provides custom scripts and workflow documentation used for data processing and manuscript-related analyses associated with the ibSLS paper.
+This repository provides custom scripts and workflow documentation used for data processing and manuscript-related analyses.
 
 **ibSLS: A Biobank for Democratizing Access to Multi-Omics Data and Biospecimens from Spaceflight Research**  
 *Manuscript under revision*
