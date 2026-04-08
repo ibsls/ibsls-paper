@@ -64,5 +64,3 @@ On a typical desktop computer, each RPM plotting script should complete within a
 ## Notes
 - Raw RPM records are aggregated into fixed-size bins within each script before plotting.
 - Median elapsed time and median RPM per bin are used for visualization.
-- The shaded interval in each plot corresponds to the period used for summary-statistics calculation in the manuscript.
-
