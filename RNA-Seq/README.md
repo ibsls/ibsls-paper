@@ -75,14 +75,13 @@ This script expands replicate counts from each comparison group, reconstructs th
 |---|---|---|---|
 | STAR | 2.6.1d | RNA-seq reference preparation and read mapping. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [1] |
 | RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [2] |
-| samtools | 1.8 | BAM sorting and indexing | [3] |
-| R | 4.1.2 and 4.2.2| Data processing and statistical analysis | [4] |
-| tidyverse | 1.3.1 | Data manipulation in `03_merge_expression.R` | [5] |
-| dplyr | 1.0.8 | Data manipulation in `03_merge_expression.R` and manuscript-specific scripts | [6] |
-| stringr | 1.4.0 | String handling in `03_merge_expression.R` | [7] |
-| gtools | 3.9.5| Mixed sorting of file names in `03_merge_expression.R` | [8] |
-| DESeq2 | 1.38.3 | Differential expression analysis | [9] |
-| Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [10] |
+| R | 4.1.2 and 4.2.2| Data processing and statistical analysis | [3] |
+| tidyverse | 1.3.1 | Data manipulation in `03_merge_expression.R` | [4] |
+| dplyr | 1.0.8 | Data manipulation in `03_merge_expression.R` and manuscript-specific scripts | [5] |
+| stringr | 1.4.0 | String handling in `03_merge_expression.R` | [6] |
+| gtools | 3.9.5| Mixed sorting of file names in `03_merge_expression.R` | [7] |
+| DESeq2 | 1.38.3 | Differential expression analysis | [8] |
+| Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [9] |
 
 ## Expected run time
 
@@ -94,20 +93,18 @@ Each step typically requires several hours per sample, depending on read depth a
 
 [2] Li B, Dewey CN. *RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome*. BMC Bioinformatics. 2011;12:323. doi:10.1186/1471-2105-12-323
 
-[3] Danecek P, Bonfield JK, Liddle J, Marshall J, Ohan V, Pollard MO, Whitwham A, Keane T, McCarthy SA, Davies RM, Li H. *Twelve years of SAMtools and BCFtools*. GigaScience. 2021;10(2):giab008. doi:10.1093/gigascience/giab008
+[3] R Core Team. *R: A language and environment for statistical computing*. R Foundation for Statistical Computing, Vienna, Austria.
 
-[4] R Core Team. *R: A language and environment for statistical computing*. R Foundation for Statistical Computing, Vienna, Austria.
+[4] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H. *Welcome to the tidyverse*. Journal of Open Source Software. 2019;4(43):1686. doi:10.21105/joss.01686
 
-[5] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H. *Welcome to the tidyverse*. Journal of Open Source Software. 2019;4(43):1686. doi:10.21105/joss.01686
+[5] Wickham H, François R, Henry L, Müller K, Vaughan D. *dplyr: A Grammar of Data Manipulation*. R package.
 
-[6] Wickham H, François R, Henry L, Müller K, Vaughan D. *dplyr: A Grammar of Data Manipulation*. R package.
+[6] Wickham H. *stringr: Simple, Consistent Wrappers for Common String Operations*. R package.
 
-[7] Wickham H. *stringr: Simple, Consistent Wrappers for Common String Operations*. R package.
+[7] Warnes GR, Bolker B, Lumley T. *gtools: Various R Programming Tools*. R package.
 
-[8] Warnes GR, Bolker B, Lumley T. *gtools: Various R Programming Tools*. R package.
+[8] Love MI, Huber W, Anders S. *Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2*. Genome Biology. 2014;15(12):550. doi:10.1186/s13059-014-0550-8
 
-[9] Love MI, Huber W, Anders S. *Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2*. Genome Biology. 2014;15(12):550. doi:10.1186/s13059-014-0550-8
-
-[10] Python Software Foundation. *Python Language Reference*. Available at: https://www.python.org/
+[9] Python Software Foundation. *Python Language Reference*. Available at: https://www.python.org/
 
 
