@@ -33,14 +33,9 @@ During this step, read mapping was carried out internally with STAR through the 
 
 Scripts: `scripts/01_rsem_quantification_paired.sh` (for paired-end data) or `scripts/01_rsem_quantification_single.sh` (for single-end data).  
 
-Input:  
-- `FASTQ file`  
-- `index`
+Input: `FASTQ file`, `index`
 
-Output: 
-- per-sample gene-level expression marix `.genes.results`
-- per-sample isoform-level expression marix `.isoforms.results`
-- `BAM files`
+Output: `.genes.results` (per-sample gene-level expression marix), `.isoforms.results` (per-sample isoform-level expression marix), `BAM files`
 
 ## 3. Merging expression results
 
