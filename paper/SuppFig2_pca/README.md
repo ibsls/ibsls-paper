@@ -22,7 +22,6 @@ The `sample_metadata.tsv` must contain the following columns:
 Each `.genes.results` file is expected to contain, at minimum, the following columns:
 
 - `gene_id` (e.g. `ENSMUSG00000000001.4`, `ENSMUSG00000000003.15`)
-- `transcript_id(s)` (e.g. `ENSMUST00000000001.4`, `ENSMUST00000000003.13,ENSMUST00000114041.2`)
 - `expected_count` (numeric values)
 - `TPM` (numeric values)
 The filename of each `.genes.results` file must be formatted so that the sample identifier extracted from the filename matches `ibSLSDataID` in `sample_metadata.tsv`.
@@ -31,7 +30,6 @@ The filename of each `.genes.results` file must be formatted so that the sample 
 ## Output
 The script produces:
 - `SourceData_SuppFigS2.csv`  
-  PCA score table including sample identifiers, principal component scores (PC1 and PC2), and associated sample metadata
 
 ## Example
 ```bash
@@ -75,7 +73,6 @@ On a typical desktop computer, each RPM plotting script should complete within a
 
 
 ## Notes
-- PCA is performed on log2-transformed TPM values, calculated as log2(TPM + 1).
-- Genes are retained for PCA if TPM > 1 in more than 30% of samples.
-- PCA is performed on the transposed gene-by-sample matrix using prcomp(..., scale. = TRUE).
-- The output file was used for web-rendered visualisation using interactive PCA viewer.
+- PCA is performed on log2(TPM + 1) values.
+- Genes were retained if TPM > 1 in more than 30% of samples.
+- The visualization shown in Supplementary Fig. 2 was rendered through the ibSLS web interface. This script generates the PCA score table underlying that visualization.
