@@ -37,8 +37,35 @@ Rscript scripts/SuppFig2_pca_plot.R
 Example output files:
 - `SourceData_SuppFigS2.csv`
 
+## Environment
+
+The scripts were developed and tested in the following environment:
+
+| Software | Version | Purpose | Ref. | 
+|---|---|---|---|
+| R | 4.1.2 | Data processing  and statistical analysis | [1] | 
+| tidyverse | 1.3.1 | Data manipulation | [2] | 
+| dplyr | 1.0.8 | Data manipulation | [3] | 
+
+## Installation
+
+Install the required R packages before running the scripts:
+
+```r
+install.packages(c("tidyverse", "dplyr"))
+```
+
 ## Expected run time
-On a typical desktop computer, the script should complete within a few minutes, depending on the number of samples and the size of the input files.
+On a typical desktop computer, each RPM plotting script should complete within a few seconds.
+
+## References
+
+[1] R Core Team. *R: A language and environment for statistical computing*. R Foundation for Statistical Computing, Vienna, Austria.
+
+[2] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019). “Welcome to the tidyverse.” _Journal of Open Source Software_, *4*(43), 1686. doi:10.21105/joss.01686.
+
+[3] Wickham H, François R, Henry L, Müller K, Vaughan D (2026). _dplyr: A Grammar of Data Manipulation_. doi:10.32614/CRAN.package.dplyr. 
+
 
 ## Notes
 - PCA is performed on log2-transformed TPM values, calculated as log2(TPM + 1).
