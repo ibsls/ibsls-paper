@@ -49,6 +49,10 @@ A STAR genome generation log from the original analysis environment is provided 
 
 This log is included as supplementary provenance information.
 
+## Expected run time
+
+Each step typically requires several hours per sample, depending on read depth and computing environment.
+
 ## Note
 
 Reference index files are not included in this repository.
