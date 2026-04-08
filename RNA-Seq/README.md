@@ -17,7 +17,7 @@ The RNA-seq workflow consists of the following steps:
 4. Generation of compact count tables for group-wise comparison
 5. Two-group differential expression analysis using DESeq2
    
-## 1. Reference preparation  
+## Reference preparation  
 Reference preparation is described in: `references/README.md`  
 
 Script: `references/build_index.sh`
@@ -26,7 +26,7 @@ Input: `reference genome FASTA`, `gene annotation GTF`
 
 Output: `RSEM reference files`, `STAR index files`
 
-## 2. Quantification
+## Quantification
 
 Expression quantification was performed using `rsem-calculate-expression`.  
 During this step, read mapping was carried out internally with STAR through the `--star` option.  
@@ -37,23 +37,26 @@ Input: `FASTQ file`, `index`
 
 Output: `*.genes.results` (per-sample gene-level expression marix), `.isoforms.results` (per-sample isoform-level expression marix), `BAM files`
 
-## 3. Merging expression results
+## Merging expression results
 
 Merges per-sample RSEM gene-level result files to generate gene-level expression matrix for downstream analyses.
 
-Scripts: `scripts/03_merge_expression.R`
+Script: `scripts/03_merge_expression.R`
 
 Input: `../references/idlist_vM20.tsv`, `*.genes.results`
 
 Output: `merged.genes.results.txt` (merged gene-level expression table)   
 
-## 4. Generation of compact count tables
+## Generation of compact count tables
 
-Compact count tables for group-wise comparisons were generated using:
+Generates compact count tables for DESeq2 from a merged gene expression table.
 
-- `scripts/04_make_count_table.py`
+Script: `scripts/03_make_count_table.py`
 
-This step converts merged gene-level expression results into compact count tables in which replicate counts for each comparison group are stored as comma-separated values.
+Inputs: `sample_list.csv` (sample-level annotation needed for group-wise aggregation of expression counts), `merged.genes.results.txt`
+
+Output: `count_table.tsv` (tab-delimited table in which groups are separated into columns, and replicate counts within each group are represented as comma-separated values in each cell)   
+
 
 ## 5. Differential expression analysis
 
