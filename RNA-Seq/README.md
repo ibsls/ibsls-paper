@@ -83,9 +83,6 @@ This script expands replicate counts from each comparison group, reconstructs th
 | DESeq2 | 1.38.3 | Differential expression analysis | [8] |
 | Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [9] |
 
-## Expected run time
-
-Each step typically requires several hours per sample, depending on read depth and computing environment.
 
 ## References
 
