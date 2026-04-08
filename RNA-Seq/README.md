@@ -83,12 +83,12 @@ This script expands replicate counts from each group, reconstructs the count mat
 | STAR | 2.6.1d | RNA-seq reference preparation and read mapping. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [1] |
 | RSEM | 1.3.1 | RNA-seq reference preparation and expression quantification. Used with `rsem-prepare-reference --star` and `rsem-calculate-expression --star`. | [2] |
 | R | 4.1.2 and 4.2.2| Data processing and statistical analysis | [3] |
-| tidyverse | 1.3.1 | Data manipulation in `03_merge_expression.R` | [4] |
-| dplyr | 1.0.8 | Data manipulation in `03_merge_expression.R` and manuscript-specific scripts | [5] |
-| stringr | 1.4.0 | String handling in `03_merge_expression.R` | [6] |
+| tidyverse | 1.3.1 | Data manipulation in `02_merge_expression.R` | [4] |
+| dplyr | 1.0.8 | Data manipulation in `02_merge_expression.R` | [5] |
+| stringr | 1.4.0 | String handling in `02_merge_expression.R` | [6] |
 | gtools | 3.9.5| Mixed sorting of file names in `03_merge_expression.R` | [7] |
-| DESeq2 | 1.38.3 | Differential expression analysis | [8] |
-| Python | [xxx] | Generation of compact count tables in `04_make_count_table.py` | [9] |
+| DESeq2 | 1.38.3 | Differential expression analysis in `04_deseq2_DEGanalysis.R` | [8] |
+| Python | [xxx] | Generation of compact count tables in `03_make_count_table.py` | [9] |
 
 
 ## References
