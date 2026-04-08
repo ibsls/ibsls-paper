@@ -74,4 +74,4 @@ On a typical desktop computer, each RPM plotting script should complete within a
 - PCA is performed on log2-transformed TPM values, calculated as log2(TPM + 1).
 - Genes are retained for PCA if TPM > 1 in more than 30% of samples.
 - PCA is performed on the transposed gene-by-sample matrix using prcomp(..., scale. = TRUE).
-- The output file was used for web-lendered visualisation using interactive PCA viewer.
+- The output file was used for web-rendered visualisation using interactive PCA viewer.
