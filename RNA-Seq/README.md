@@ -1,6 +1,6 @@
 # RNA-Seq workflow
 
-This directory contains scripts and documentation for RNA-seq data processing used in the ibSLS project and associated manuscript analyses.
+This directory contains scripts and documentation for RNA-seq data processing used in the ibSLS project.
 
 ## Overview
 
