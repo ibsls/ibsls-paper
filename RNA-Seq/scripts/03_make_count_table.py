@@ -5,15 +5,14 @@
 #
 # Required input files:
 #   - sample_list.csv
-#   - merged_genes_results.txt
+#   - merged.genes.results.txt
 #
 # Input assumptions:
 #   sample_list.csv must contain at least:
 #     - sample ID in column 1
 #     - tissue in column 3
 #     - category in column 4
-#
-#   merged_genes_results.txt must contain expected_count columns named as:
+#   merged.genes.results.txt must contain expected_count columns named as:
 #     SAMPLEID|expected_count
 #
 # Output:
@@ -47,7 +46,7 @@ def main():
     print("# Sample:", len(sample_list))
 
     expression_dict = {}
-    ref_file = open("merged_genes_results.txt", "r")
+    ref_file = open("merged.genes.results.txt", "r")
     lines = ref_file.readlines()
     ref_file.close()
 
