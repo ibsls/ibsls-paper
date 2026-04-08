@@ -13,11 +13,11 @@ library(ggsci)
 #   - *.genes.results (output files from rsem-calculate-expression )
 #
 # Required columns in sample_metadata.tsv:
-#   - ibSLSDataID
-#   - Tissues_TissueID
-#   - Tissues_TissueName
-#   - Missions_MissionID
-#   - ExperimentGroups_GroupID
+#   - ibSLSDataID  
+#   - ibSLSDataReleaseID
+#   - TissueName
+#   - MissionID
+#   - Group
 #
 # Output files:
 #   - PCA_allsamples_score.csv
@@ -81,35 +81,9 @@ s <- summary(pca)
 score <- as.data.frame(pca$x) %>%
   rownames_to_column("ibSLSDataID") %>%
   left_join(samples, by = "ibSLSDataID") %>%
-  mutate(
-    Tissues_TissueID = case_when(
-      is.na(Tissues_TissueID) ~ "Liv",
-      TRUE ~ Tissues_TissueID
-    ),
-    Missions_MissionID = case_when(
-      is.na(Missions_MissionID) ~ "MHU02",
-      TRUE ~ Missions_MissionID
-    )
-  ) %>%
-  mutate(
-    Genotype = case_when(
-      grepl("_KO", ExperimentGroups_GroupID) ~ "KO",
-      TRUE ~ "WT"
-    ),
-    Group = case_when(
-      grepl("_AG", ExperimentGroups_GroupID) ~ "AG",
-      grepl("_MG", ExperimentGroups_GroupID) ~ "MG",
-      grepl("_GC", ExperimentGroups_GroupID) ~ "GC",
-      grepl("MHU03_FL", ExperimentGroups_GroupID) ~ "MG"
-    )
-  ) %>%
-  mutate(
-    Genotype = factor(Genotype, levels = c("WT", "KO")),
-    Group = factor(Group, levels = c("GC", "MG", "AG", "PG")),
-    Missions_MissionID = factor(Missions_MissionID, levels = c("MHU01", "MHU02", "MHU03", "MHU04", "MHU05"))
-  )
+select(ibSLSDataReleaseID,Mission,Tissue,GroupName,PC1,PC2)
 
-write.csv(score, "SourceData_SuppFigS2.csv", quote = FALSE, row.names = FALSE)
+write.csv(score, "SourceData_SuppFig2.csv", quote = FALSE, row.names = FALSE)
 
 pdf("PCA_forSuppFigS2.pdf")
 
