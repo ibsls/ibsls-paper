@@ -9,9 +9,9 @@ The following script was used to generate the PCA across all samples shown in Su
 This script requires the following input files:
 
 - `sample_metadata.tsv`
-- gene-level RSEM result files in `files/used/` with filenames ending in `.genes.results`
+- gene-level RSEM result files with filenames ending in `.genes.results`
 
-The metadata table must contain the following columns:
+The `sample_metadata.tsv` must contain the following columns:
 
 - `TissueName` (e.g. `Liver`, `Thymus`)
 - `MissionID` (e.g. `MHU-1`, `MHU-2`)
