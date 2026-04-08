@@ -34,7 +34,7 @@ Expression quantification was performed using `rsem-calculate-expression`.
 During this step, read mapping was carried out internally with STAR through the `--star` option.  
 Separate scripts are provided for paired-end and single-end RNA-seq data:
 
-Scripts: `scripts/01_rsem_quantification_paired.sh`, `scripts/01_rsem_quantification_single.sh`
+Scripts: `scripts/01_rsem_quantification_paired.sh`, `scripts/01_rsem_quantification_single.sh`  
 Input: `FASTQ files`, `index files`
 Output: 
 - per-sample gene-level expression marix `.genes.results`
