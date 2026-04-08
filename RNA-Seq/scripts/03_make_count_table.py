@@ -60,22 +60,16 @@ def main():
         expression_dict[gene_id] = {}
 
         for i, e in enumerate(header):
-            if "expected_count" in e:
-                sample_id_pre = "_".join(
-                    [x.upper() for x in e.split("|")[0].replace("_", "-").split("-")[:-1]]
-                )
-                sample_id = "%s_%s_%02d" % (
-                    sample_id_pre.split("_")[0],
-                    sample_id_pre.split("_")[1],
-                    int(sample_id_pre.split("_")[2]),
-                )
-                expression_dict[gene_id][sample_id] = line_items[i]
-
+            if e.endswith("|expected_count"):
+               sample_id = e.split("|")[0]
+               expression_dict[gene_id][sample_id] = line_items[i]
+        
         c += 1
         if c % 1000 == 0:
             print(c)
 
-    sample_with_expression = sorted(expression_dict["ENSMUSG00000000001.4"].keys())
+    first_gene = next(iter(expression_dict))
+    sample_with_expression = sorted(expression_dict[first_gene].keys())
     print("# Sample with expression:", len(sample_with_expression))
 
     sample_with_expression_with_annotation = list(set(sample_with_expression) & set(sample_list))
