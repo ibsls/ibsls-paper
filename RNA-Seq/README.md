@@ -9,10 +9,9 @@ The workflow includes:
 1. preparation of the RSEM reference
 2. expression quantification with RSEM
 3. read mapping performed internally with STAR during RSEM quantification
-4. BAM processing using samtools
-5. merging per-sample expression outputs
-6. generation of compact count tables for group-wise comparison
-7. differential expression analysis using DESeq2
+4. merging per-sample expression outputs
+5. generation of compact count tables for group-wise comparison
+6. differential expression analysis using DESeq2
 
 ## Directory structure
 
@@ -44,18 +43,9 @@ Input:
 - reference prefix
 
 Output:
-- per-sample `.genes.results`
-- per-sample `.isoforms.results`
+- per-sample gene-level expression marix `.genes.results`
+- per-sample isoform-level expression marix `.isoforms.results`
 - BAM files
-
-
-## BAM processing
-
-BAM processing was performed using:
-
-- `scripts/02_samtools_sort.sh`
-
-This step sorts and indexes BAM files for downstream analysis.
 
 ## Merging expression results
 
