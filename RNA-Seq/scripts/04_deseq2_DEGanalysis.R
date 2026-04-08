@@ -78,14 +78,14 @@ meanB <- rowMeans(count_mat[, (nA + 1):(nA + nB), drop = FALSE])
 log2_ratio <- log2((meanA + 1) / (meanB + 1))
 
 up_in_A <- ifelse(log2_ratio > 0, 1, 0)
-up_in_B <- ifelse(log2_ratio > 0, 0, 1)
+down_in_A <- ifelse(log2_ratio > 0, 0, 1)
 
 pval[is.na(pval)] <- 1
 qval[is.na(qval)] <- 1
 rank_val[is.na(rank_val)] <- 0
 log2_ratio[is.na(log2_ratio)] <- 0
 up_in_A[is.na(up_in_A)] <- 0
-up_in_B[is.na(up_in_B)] <- 0
+down_in_A[is.na(down_in_A)] <- 0
 
 out_df <- data.frame(
   geneID = gene_id,
@@ -94,7 +94,7 @@ out_df <- data.frame(
   Rank = rank_val,
   log2_ratio = log2_ratio,
   up_in_A = up_in_A,
-  up_in_B = up_in_B,
+  down_in_A = down_in_A,
   stringsAsFactors = FALSE
 )
 
