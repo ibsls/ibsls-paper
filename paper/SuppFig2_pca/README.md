@@ -1,18 +1,27 @@
 # PCA of transcriptome profiles across missions and tissues
 
-The following script was used to generate the all-sample PCA shown in Supplementary Fig. 2.  
-- `scripts/SuppFig2_pca_plot.R`  
+The following script was used to generate the PCA across all samples shown in Supplementary Fig. 2.
+
+`scripts/SuppFig2_pca_plot.R`
 
 ## Input data
+
 This script requires the following input files:
+
 - `sample_metadata.tsv`
 - gene-level RSEM result files in `files/used/` with filenames ending in `.genes.results`
 
-The metadata table must contain the following columns:  
-`TissueName (e.g. Liver, Thymus, ...)`, `MissionID (e.g. MHU1, MHU-2, ...)`, `Group (e.g. MHU01_GC_WT, MHU01_FL_WT, ...)`
+The metadata table must contain the following columns:
+
+- `TissueName` (e.g. `Liver`, `Thymus`)
+- `MissionID` (e.g. `MHU-1`, `MHU-2`)
+- `Group` (e.g. `MHU01_GC_WT`, `MHU01_FL_WT`)
 
 Each `.genes.results` file is expected to contain, at minimum, the following columns:
-`gene_id (e.g. ENSMUSG00000000001.4, ENSMUSG00000000003.15, ...)`, `expected_count (neumerical values)`, `TPM (neumerical values)`
+
+- `gene_id` (e.g. `ENSMUSG00000000001.4`, `ENSMUSG00000000003.15`)
+- `expected_count` (numeric values)
+- `TPM` (numeric values)
 
 ## Output
 The script produces:
