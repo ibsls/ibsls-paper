@@ -12,9 +12,9 @@ See `SuppFig1_MARSparameters/README.md` for details.
 
 ## PCA of transcriptome profiles across missions and tissues
 
-The script used to generate the PCA score table underlying Supplementary Fig. 2 is described in:
+The PCA score table underlying Supplementary Fig. 2 is generated from per-sample RSEM gene-level results.
 
-`SuppFig2_pca/README.md`
+See `SuppFig2_pca/README.md` for details.
 
 ## Web-rendered panels
 
