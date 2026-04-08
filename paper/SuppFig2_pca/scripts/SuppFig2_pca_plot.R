@@ -20,8 +20,7 @@ library(ggsci)
 #   - Group
 #
 # Output files:
-#   - PCA_allsamples_score.csv
-#   - PCA_allsamples.pdf
+#   - SourceData_SuppFig2.csv
 #
 # Notes:
 #   - PCA is performed on log2(TPM + 1).
@@ -85,83 +84,4 @@ select(ibSLSDataReleaseID,Mission,Tissue,GroupName,PC1,PC2)
 
 write.csv(score, "SourceData_SuppFig2.csv", quote = FALSE, row.names = FALSE)
 
-pdf("PCA_forSuppFigS2.pdf")
 
-g <- ggplot(score, aes(x = PC1, y = PC2)) +
-  geom_point(size = 2) +
-  theme_bw() +
-  theme(legend.position = "top") +
-  ggtitle(
-    "allSamples",
-    subtitle = "genes w/ TPM > 1 in >30% of samples"
-  ) +
-  xlab(paste("PC1", round(s$importance["Proportion of Variance", "PC1"], 4) * 100, "%")) +
-  ylab(paste("PC2", round(s$importance["Proportion of Variance", "PC2"], 4) * 100, "%"))
-plot(g)
-
-g <- ggplot(score, aes(x = PC1, y = PC2, color = Tissues_TissueID)) +
-  geom_point(size = 2) +
-  scale_color_primer(palette = c("mark17")) +
-  theme_bw() +
-  theme(legend.position = "top") +
-  ggtitle(
-    "allSamples",
-    subtitle = "genes w/ TPM > 1 in >30% of samples"
-  ) +
-  xlab(paste("PC1", round(s$importance["Proportion of Variance", "PC1"], 4) * 100, "%")) +
-  ylab(paste("PC2", round(s$importance["Proportion of Variance", "PC2"], 4) * 100, "%"))
-plot(g)
-
-g <- ggplot(score, aes(x = PC1, y = PC2, color = Missions_MissionID)) +
-  geom_point(size = 2) +
-  scale_color_nejm() +
-  theme_bw() +
-  theme(legend.position = "top") +
-  ggtitle(
-    "allSamples",
-    subtitle = "genes w/ TPM > 1 in >30% of samples"
-  ) +
-  xlab(paste("PC1", round(s$importance["Proportion of Variance", "PC1"], 4) * 100, "%")) +
-  ylab(paste("PC2", round(s$importance["Proportion of Variance", "PC2"], 4) * 100, "%"))
-plot(g)
-
-g <- ggplot(score, aes(x = PC1, y = PC2, color = Tissues_TissueID, shape = Missions_MissionID)) +
-  geom_point(size = 2) +
-  scale_color_primer(palette = c("mark17")) +
-  theme_bw() +
-  theme(legend.position = "top") +
-  ggtitle(
-    "allSamples",
-    subtitle = "genes w/ TPM > 1 in >30% of samples"
-  ) +
-  xlab(paste("PC1", round(s$importance["Proportion of Variance", "PC1"], 4) * 100, "%")) +
-  ylab(paste("PC2", round(s$importance["Proportion of Variance", "PC2"], 4) * 100, "%"))
-plot(g)
-
-g <- ggplot(score, aes(x = PC3, y = PC4, color = Tissues_TissueID, shape = Missions_MissionID)) +
-  geom_point(size = 2) +
-  scale_color_primer(palette = c("mark17")) +
-  theme_bw() +
-  theme(legend.position = "top") +
-  ggtitle(
-    "allSamples",
-    subtitle = "genes w/ TPM > 1 in >30% of samples"
-  ) +
-  xlab(paste("PC3", round(s$importance["Proportion of Variance", "PC3"], 4) * 100, "%")) +
-  ylab(paste("PC4", round(s$importance["Proportion of Variance", "PC4"], 4) * 100, "%"))
-plot(g)
-
-g <- ggplot(score, aes(x = PC5, y = PC6, color = Tissues_TissueID, shape = Missions_MissionID)) +
-  geom_point(size = 2) +
-  scale_color_primer(palette = c("mark17")) +
-  theme_bw() +
-  theme(legend.position = "top") +
-  ggtitle(
-    "allSamples",
-    subtitle = "genes w/ TPM > 1 in >30% of samples"
-  ) +
-  xlab(paste("PC5", round(s$importance["Proportion of Variance", "PC5"], 4) * 100, "%")) +
-  ylab(paste("PC6", round(s$importance["Proportion of Variance", "PC6"], 4) * 100, "%"))
-plot(g)
-
-dev.off()
