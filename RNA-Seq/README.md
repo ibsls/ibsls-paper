@@ -1,25 +1,23 @@
 # RNA-Seq workflow
 
-This directory contains scripts and documentation for RNA-seq data processing used in the ibSLS project.
-
-## Overview
-
-The workflow includes:
-
-1. preparation of the RSEM reference
-2. expression quantification with RSEM
-3. read mapping performed internally with STAR during RSEM quantification
-4. merging per-sample expression outputs
-5. generation of compact count tables for group-wise comparison
-6. differential expression analysis using DESeq2
+This directory contains scripts and reference files used for RNA-seq processing in ibSLS database construction.
 
 ## Directory structure
 
-- `examples/`: examples of sample lists and output tables
-- `references/`: reference preparation scripts and related documentation
-- `scripts/`: RNA-seq processing, aggregation, and differential expression analysis scripts
+- `references/`: scripts for RSEM reference preparation and STAR index generation 
+- `scripts/`: scripts for expression quantification, result merging, count table generation, and differential expression analysis
 
-## Reference preparation  
+## Overview
+
+The RNA-seq workflow consists of the following steps:
+
+1. Preparation of the RSEM reference
+2. Expression quantification from FASTQ files using RSEM with STAR
+3. Merging of per-sample gene-level expression results
+4. Generation of compact count tables for group-wise comparison
+5. Two-group differential expression analysis using DESeq2
+   
+## 1. Reference preparation  
 Reference preparation is described in: `references/README.md`  
 
 Script: `references/build_index.sh`
@@ -28,30 +26,38 @@ Input: `reference genome FASTA`, `gene annotation GTF`
 
 Output: `RSEM reference files`, `STAR index files`
 
-## Quantification
+## 2. Quantification
 
 Expression quantification was performed using `rsem-calculate-expression`.  
 During this step, read mapping was carried out internally with STAR through the `--star` option.  
-Separate scripts are provided for paired-end and single-end RNA-seq data:
 
-Scripts: `scripts/01_rsem_quantification_paired.sh` or `scripts/01_rsem_quantification_single.sh`  
+Scripts: `scripts/01_rsem_quantification_paired.sh` (for paired-end data) or `scripts/01_rsem_quantification_single.sh` (for single-end data).  
 
-Input: `FASTQ files`, `index files`  
+Input:  
+- `FASTQ file`  
+- `index`
 
 Output: 
 - per-sample gene-level expression marix `.genes.results`
 - per-sample isoform-level expression marix `.isoforms.results`
 - `BAM files`
 
-## Merging expression results
+## 3. Merging expression results
 
-Per-sample expression outputs were merged using:
+Merges per-sample RSEM gene-level result files and appends gene annotations.
 
-- `scripts/03_merge_expression.R`
+Scripts: `scripts/03_merge_expression.R`
+
+Input: 
+- `../references/idlist_vM20.tsv`
+- `*.genes.results`
+
+Output:  
+- merged gene-level expression table
 
 This step generates a merged gene-level expression matrix for downstream analyses.
 
-## Generation of compact count tables
+## 4. Generation of compact count tables
 
 Compact count tables for group-wise comparisons were generated using:
 
@@ -59,7 +65,7 @@ Compact count tables for group-wise comparisons were generated using:
 
 This step converts merged gene-level expression results into compact count tables in which replicate counts for each comparison group are stored as comma-separated values.
 
-## Differential expression analysis
+## 5. Differential expression analysis
 
 Differential expression analysis was performed using DESeq2 from the compact count tables generated in the previous step.
 
