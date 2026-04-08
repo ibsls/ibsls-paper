@@ -46,6 +46,7 @@ The scripts were developed and tested in the following environment:
 | R | 4.1.2 | Data processing  and statistical analysis | [1] | 
 | tidyverse | 1.3.1 | Data manipulation | [2] | 
 | dplyr | 1.0.8 | Data manipulation | [3] | 
+| gtools | 3.9.5 | Data manipulation | [4] | 
 
 ## Installation
 
@@ -65,6 +66,8 @@ On a typical desktop computer, each RPM plotting script should complete within a
 [2] Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019). “Welcome to the tidyverse.” _Journal of Open Source Software_, *4*(43), 1686. doi:10.21105/joss.01686.
 
 [3] Wickham H, François R, Henry L, Müller K, Vaughan D (2026). _dplyr: A Grammar of Data Manipulation_. doi:10.32614/CRAN.package.dplyr. 
+
+[4] Warnes G, Bolker B, Lumley T, Magnusson A, Venables B, Ryodan G, Moeller S (2023). _gtools: Various R Programming Tools_. doi:10.32614/CRAN.package.gtools 
 
 
 ## Notes
