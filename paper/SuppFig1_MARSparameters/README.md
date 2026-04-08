@@ -9,7 +9,7 @@ The following scripts generate the binned data and figure panels from the raw RP
 - `scripts/SuppFig1d_MHU5_RPM_plot.R`
 
 ## Input data
-Each script expects the corresponding raw RPM record file as input in tab-delimited text format, as provided in the Supplementary Data.
+Each script expects the corresponding raw RPM record file as input in tab-delimited text format, as provided in the Supplementary Data 10-13.
 
 ## Output
 Each script produces:
