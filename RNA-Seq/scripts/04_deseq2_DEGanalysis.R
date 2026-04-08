@@ -21,6 +21,8 @@ library(DESeq2)
 # Notes:
 #   - DESeq2 is run with design = ~ group
 #   - results are extracted with contrast = c("group", "A", "B")
+#   - log2_ratio is calculated from mean counts as log2((meanA + 1) / (meanB + 1))
+#   - positive log2_ratio values indicate higher expression in group A relative to group B
 
 args <- commandArgs(trailingOnly = TRUE)
 
