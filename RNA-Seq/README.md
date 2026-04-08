@@ -60,14 +60,14 @@ Inputs:
 - `sample_list.csv` (sample-level annotation used for group-wise aggregation of expression counts)
 - `merged.genes.results.txt`
 
-Output: grouped count table for downstream DESeq2 analysis   
+Output: `count_table.tsv` (grouped count table for downstream DESeq2 analysis)
 
 ## Differential expression analysis   
 Performs two-group differential expression analysis from the compact count table using DESeq2.   
 
 Script: `script/04_deseq2_DEGanalysis.R`   
 
-Input: the compact count tables generated in the previous step
+Input: `count_table.tsv` (the compact count tables generated in the previous step)
 - column 1: gene ID
 - column 2: comma-separated counts for group B replicates
 - column 3: comma-separated counts for group A replicates
