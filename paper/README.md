@@ -102,7 +102,6 @@ The scripts were developed and tested in the following environment:
 | dplyr | 1.0.8 | Data manipulation | [3] | 
 | lubridate | 1.8.0 | Date handling | [4] | 
 | ggplot2 | 3.3.5 | Data visualization | [5] | 
-| ggsci | 4.2.0 | Color palettes for ggplot2 | [6] |
 
 ## Installation
 
@@ -123,6 +122,4 @@ install.packages(c("tidyverse", "dplyr", "lubridate", "ggplot2", "ggsci"))
 [4] Garrett Grolemund, Hadley Wickham (2011). Dates and Times Made Easy with lubridate. Journal of Statistical Software, 40(3), 1-25. 
 
 [5] H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016.
-
-[6]  Xiao N (2025). _ggsci: Scientific Journal and Sci-Fi Themed Color Palettes for 'ggplot2'_. doi:10.32614/CRAN.package.ggsci. 
 
