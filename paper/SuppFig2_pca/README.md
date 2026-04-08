@@ -8,10 +8,8 @@ This script requires the following input files:
 - `sample_metadata.tsv`
 - gene-level RSEM result files in `files/used/` with filenames ending in `.genes.results`
 
-The metadata table must contain the following columns:
-- `Tissues_TissueName`
-- `Missions_MissionID`
-- `ExperimentGroups_GroupID`
+The metadata table must contain the following columns:  
+`TissueName (e.g. Liver, Thymus, ...)`, `MissionID (e.g. MHU1, MHU-2, ...)`, `Group (e.g. MHU01_GC_WT, MHU01_FL_WT, ...`
 
 Each `.genes.results` file is expected to contain, at minimum, the following columns:
 - `gene_id`
