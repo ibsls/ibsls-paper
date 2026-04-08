@@ -43,7 +43,7 @@ The scripts were developed and tested in the following environment:
 Install the required R packages before running the scripts:
 
 ```r
-install.packages(c("tidyverse", "dplyr", "lubridate", "ggplot2", "ggsci"))
+install.packages(c("tidyverse", "dplyr", "lubridate", "ggplot2"))
 ```
 
 ## Expected run time
