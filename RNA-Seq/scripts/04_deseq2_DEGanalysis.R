@@ -16,7 +16,7 @@ library(DESeq2)
 # Example:
 #   Rscript 04_deseq2_DEGanalysis.R \
 #     count_table.tsv \
-#     DEG_count_table_GCvsAG.tsv
+#     DEG_count_table_BvsA.tsv
 #
 # Notes:
 #   - DESeq2 is run with design = ~ group
