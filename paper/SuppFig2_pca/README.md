@@ -12,7 +12,7 @@ The metadata table must contain the following columns:
 `TissueName (e.g. Liver, Thymus, ...)`, `MissionID (e.g. MHU1, MHU-2, ...)`, `Group (e.g. MHU01_GC_WT, MHU01_FL_WT, ...)`
 
 Each `.genes.results` file is expected to contain, at minimum, the following columns:
-- `gene_id (e.g. ENSMUSG00000000001.4, ENSMUSG00000000003.15, ...)`, `expected_count (neumeric values)`, `TPM (neumeric values)`
+`gene_id (e.g. ENSMUSG00000000001.4, ENSMUSG00000000003.15, ...)`, `expected_count (neumerical values)`, `TPM (neumerical values)`
 
 ## Output
 The script produces:
