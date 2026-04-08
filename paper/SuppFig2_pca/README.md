@@ -13,8 +13,10 @@ This script requires the following input files:
 
 The `sample_metadata.tsv` must contain the following columns:
 
+- `ibSLSDataID`
+- `ibSLSDataReleaseID`
 - `TissueName` (e.g. `Liver`, `Thymus`)
-- `MissionID` (e.g. `MHU-1`, `MHU-2`)
+- `Mission` (e.g. `MHU-1`, `MHU-2`)
 - `Group` (e.g. `MHU01_GC_WT`, `MHU01_FL_WT`)
 
 Each `.genes.results` file is expected to contain, at minimum, the following columns:
@@ -23,6 +25,8 @@ Each `.genes.results` file is expected to contain, at minimum, the following col
 - `transcript_id(s)` (e.g. `ENSMUST00000000001.4`, `ENSMUST00000000003.13,ENSMUST00000114041.2`)
 - `expected_count` (numeric values)
 - `TPM` (numeric values)
+The filename of each `.genes.results` file must be formatted so that the sample identifier extracted from the filename matches `ibSLSDataID` in `sample_metadata.tsv`.
+
 
 ## Output
 The script produces:
