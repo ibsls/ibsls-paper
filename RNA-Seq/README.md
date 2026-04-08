@@ -25,6 +25,7 @@ Script:  `references/build_index.sh`
 Input:  
 - `reference genome FASTA`
 - `gene annotation GTF`  
+
 Output:  
 - `RSEM reference files`  
 - `STAR index files`
