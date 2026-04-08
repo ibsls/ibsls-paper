@@ -29,8 +29,9 @@ library(ggsci)
 samples <- read.table("sample_metadata.tsv", sep = "\t", header = TRUE, check.names = FALSE) %>%
   select(
     ibSLSDataID,
+    ibSLSDataReleaseID,
     TissueName,
-    MissionID,
+    Mission,
     Group
   ) 
 
