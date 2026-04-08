@@ -62,7 +62,17 @@ Inputs:
 
 Output: `count_table.tsv` (grouped count table for downstream DESeq2 analysis)   
 
-## 5. Differential expression analysis
+## 5. Differential expression analysis   
+Performs two-group differential expression analysis from the compact count table using DESeq2.   
+
+Input: `count_table.tsv`
+- column 1: gene ID
+- column 2: comma-separated counts for group B replicates
+- column 3: comma-separated counts for group A replicates
+
+Output: tab-delimited DEG result table
+
+
 
 Differential expression analysis was performed using DESeq2 from the compact count tables generated in the previous step.
 
