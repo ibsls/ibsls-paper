@@ -28,8 +28,7 @@ d <- do.call(
     FUN = function(x) {
       aColumn <- read.table(x, header = TRUE, check.names = TRUE)[, c("gene_id", "transcript_id.s.", "expected_count", "TPM", "FPKM")]
 
-      sample <- gsub("_vM20.genes.results", "", x)
-      sample <- gsub("\\.genes.results", "", sample)
+      sample <- gsub("\\.genes\\.results", "",  basename(x))
 
       colnames(aColumn)[3] <- paste(sample, "expected_count", sep = "|")
       colnames(aColumn)[4] <- paste(sample, "TPM", sep = "|")
