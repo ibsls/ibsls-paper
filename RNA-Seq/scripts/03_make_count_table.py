@@ -11,7 +11,7 @@
 #   sample_list.csv must contain at least:
 #     - sample ID in column 1
 #     - tissue in column 3
-#     - category in column 4
+#     - group in column 4
 #   merged.genes.results.txt must contain expected_count columns named as:
 #     SAMPLEID|expected_count
 #
