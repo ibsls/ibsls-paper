@@ -10,8 +10,8 @@
 # Input assumptions:
 #   sample_list.csv must contain at least:
 #     - sample ID in column 1
-#     - tissue in column 3
-#     - group in column 4
+#     - tissue in column 2
+#     - group in column 3
 #   merged.genes.results.txt must contain expected_count columns named as:
 #     SAMPLEID|expected_count
 #
@@ -32,8 +32,8 @@ def main():
     for line in lines[1:]:
         line_items = line.strip().split(",")
         sample_id = line_items[0]
-        tissue = line_items[2]
-        category = line_items[3]
+        tissue = line_items[1]
+        category = line_items[2]
 
         if tissue not in sample_dict:
             sample_dict[tissue] = {}
