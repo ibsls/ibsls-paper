@@ -6,6 +6,8 @@ This directory contains scripts and reference files used for RNA-seq processing 
 
 - `references/`: scripts for RSEM reference preparation and STAR index generation 
 - `scripts/`: scripts for expression quantification, result merging, count table generation, and differential expression analysis
+- `examples/`: Example input files and corresponding example output files for selected scripts.
+
 
 ## Overview
 
