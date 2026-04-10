@@ -37,7 +37,7 @@ Additional helper functions and command-line input/output handling were added fo
 
 | Software | Version | Purpose | Ref. |
 |---|---|---|---|
-| Python | [xxx] | Metabolome data processing and DAM analysis | [1] |
+| Python | [3.9] | Metabolome data processing and DAM analysis | [1] |
 
 ## References
 
