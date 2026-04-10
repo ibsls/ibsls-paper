@@ -18,20 +18,19 @@ The workflow includes:
 
 This step extracts metabolite abundance values for predefined comparison groups from the larger metabolite quantification table and prepares compact comparison tables for downstream statistical testing.
 
-script:  `scripts/01_make_concentration_table.py`  
-
+Script:  `scripts/01_make_concentration_table.py`  
+Input:   ` `
+Output: ` `
 
 
 ## Differential abundance analysis
 
-Differential abundance metabolite (DAM) analysis was performed using:
+This script performs two-group comparison using an in-house Mann–Whitney U implementation and generates Differential abundance metabolite (DAM) result tables.
 
-- `scripts/02_dam_calculation.py`
+Script: `scripts/02_dam_calculation.py`
+Input: ` ` 
+Output: ` `
 
-This script performs two-group comparison using an in-house Mann–Whitney U implementation and generates DAM result tables.
-
-The core `mannwhitneyu()` implementation in `02_MannU_DAMAnalysis.py` is based on the original in-house script used in the ibSLS metabolome workflow.
-Additional helper functions and command-line input/output handling were added for public release.
 
 ## Core software
 
