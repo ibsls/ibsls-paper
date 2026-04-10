@@ -29,16 +29,16 @@ Inputs:  `sample_list.tsv`, `merged.consentration.tsv`
      - `sample ID` which described in sample_list.tsv
 
 Output: `metabolite_input_data.tsv`  
-Each output cell contains comma-separated replicate concentrations for one group.
+Each output cell contains comma-separated replicate concentrations for one group.  
 
 
 ## Differential abundance analysis
 
-This script performs two-group comparison using an in-house Mann–Whitney U implementation and generates Differential abundance metabolite (DAM) result tables.
+This script performs two-group comparison using an in-house Mann–Whitney U implementation and generates Differential abundance metabolite (DAM) result tables.  
 
-Script: `scripts/02_dam_calculation.py`
-Input: `merged.concentration.tsv` generated in the previous step
-Output: `dam_results.tsv`
+Script: `scripts/02_dam_calculation.py`  
+Input: `merged.concentration.tsv` generated in the previous step  
+Output: `dam_results.tsv`  
 
 
 ## Core software
