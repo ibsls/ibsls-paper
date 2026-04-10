@@ -1,1 +1,7 @@
-
+sample_id	tissue	category
+MG1	Muscle	MG
+MG2	Muscle	MG
+MG3	Muscle	MG
+GC1	Muscle	GC
+GC2	Muscle	GC
+GC3	Muscle	GC
