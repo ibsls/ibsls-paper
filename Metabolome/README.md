@@ -18,7 +18,7 @@ The workflow includes:
 
 Group-wise abundance tables were generated using:
 
-- `scripts/01_make_abundance_table.py`  まだ
+- `scripts/01_make_concentration_table.py`  
 
 This step extracts metabolite abundance values for predefined comparison groups from the larger metabolite quantification table and prepares compact comparison tables for downstream statistical testing.
 
@@ -26,7 +26,7 @@ This step extracts metabolite abundance values for predefined comparison groups 
 
 Differential abundance metabolite (DAM) analysis was performed using:
 
-- `scripts/02_MannU_DAMAnalysis.py`
+- `scripts/02_dam_calculation.py`
 
 This script performs two-group comparison using an in-house Mann–Whitney U implementation and generates DAM result tables.
 
