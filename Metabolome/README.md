@@ -19,14 +19,17 @@ The workflow includes:
 This step extracts metabolite abundance values for predefined comparison groups from the larger metabolite quantification table and prepares compact comparison tables for downstream statistical testing.
 
 Script:  `scripts/01_make_concentration_table.py`  
-Inputs:   ` sample_list.tsv`, `merged.consentration.tsv`  
+
+Inputs:  `sample_list.tsv`, `merged.consentration.tsv`  
+
 Input assumptions:
   sample_list.tsv must contain at least:  
    - `sample ID` in column 1
-   -  `group` in column 2
+   - `group` in column 2
   merged.concentration.tsv must contain `sample ID` which described in sample_list.tsv
 
-Output: ` `
+Output: `metabolite_input_data.tsv`  
+Each output cell contains comma-separated replicate concentrations for one group.
 
 
 ## Differential abundance analysis
