@@ -90,7 +90,7 @@ This script expands replicate counts from each group, reconstructs the count mat
 | stringr | 1.4.0 | String handling in `02_merge_expression.R` | [6] |
 | gtools | 3.9.5| Mixed sorting of file names in `03_merge_expression.R` | [7] |
 | DESeq2 | 1.38.3 | Differential expression analysis in `04_deseq2_DEGanalysis.R` | [8] |
-| Python | [xxx] | Generation of compact count tables in `03_make_count_table.py` | [9] |
+| Python | [3.9] | Generation of compact count tables in `03_make_count_table.py` | [9] |
 
 
 ## References
