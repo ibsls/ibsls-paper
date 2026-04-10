@@ -4,14 +4,14 @@
 # Generate compact count tables for DESeq2 from a merged gene expression table.
 #
 # Required input files:
-#   - sample_list.csv
+#   - sample_list.tsv
 #   - merged.genes.results.txt
 #
 # Input assumptions:
-#   sample_list.csv must contain at least:
+#   sample_list.tsv must contain at least:
 #     - sample ID in column 1
-#     - tissue in column 3
-#     - group in column 4
+#     - tissue in column 2
+#     - group in column 3
 #   merged.genes.results.txt must contain expected_count columns named as:
 #     SAMPLEID|expected_count
 #
