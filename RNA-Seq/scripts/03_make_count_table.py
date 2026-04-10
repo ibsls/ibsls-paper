@@ -25,15 +25,15 @@ def main():
     sample_dict = {}
     sample_list = []
 
-    ref_file = open("sample_list.csv", "r")
+    ref_file = open("sample_list.tsv", "r")
     lines = ref_file.readlines()
     ref_file.close()
 
     for line in lines[1:]:
-        line_items = line.strip().split(",")
+        line_items = line.strip().split("\t")
         sample_id = line_items[0]
-        tissue = line_items[2]
-        category = line_items[3]
+        tissue = line_items[1]
+        category = line_items[2]
 
         if tissue not in sample_dict:
             sample_dict[tissue] = {}
