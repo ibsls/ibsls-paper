@@ -16,11 +16,11 @@ The workflow includes:
 
 ## Generation of abundance tables
 
-Group-wise abundance tables were generated using:
-
-- `scripts/01_make_concentration_table.py`  
-
 This step extracts metabolite abundance values for predefined comparison groups from the larger metabolite quantification table and prepares compact comparison tables for downstream statistical testing.
+
+script:  `scripts/01_make_concentration_table.py`  
+
+
 
 ## Differential abundance analysis
 
