@@ -59,7 +59,7 @@ install.packages(c("tidyverse", "dplyr", "gtools"))
 ```
 
 ## Expected run time
-On a typical desktop computer, each RPM plotting script should complete within a few seconds.
+On a typical desktop computer, each script should complete within a few seconds.
 
 ## References
 
